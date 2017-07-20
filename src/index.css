@@ -1,5 +1,6 @@
 .wrap{
 	width:1100px;
+	margin: auto;
 }
 @media only screen and (min-width: 1100px){
 	{padding: 40px;}
@@ -15,10 +16,9 @@
 body{
 	font-size: 13px;
 	color: #1a1a1a;
+	font-family: 黑体,STHeiti, 'libre_baskervilleregular', Arial, Helvetica, sans-serif;
 }
-:lang(zh-CN) body {
-    font-family: 黑体,STHeiti, 'libre_baskervilleregular', Arial, Helvetica, sans-serif;
-}
+
 .location{
 	position: absolute;
 	top: 0; left:0;
@@ -200,6 +200,10 @@ body{
 	display: inline-block;
 	padding: 0 100px 5px 0px;
 	border-bottom: 1px solid #fff;
+	margin-bottom: 22px;
+}
+.foot_box .about_our .sxin{
+	margin: 25px 0 20px 20px;
 }
 
 .Copyright_box{

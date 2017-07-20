@@ -69,8 +69,8 @@
     z-index: 1;
 }
 .team_list li:hover .team_add{
-	transition:0.8s;
-	transform:scale(1.1);
+	transition:0.3s;
+	transform:scale(1.2);
 	animation:add forwards 0.5s 0.1s;
 }
 .team_list li:hover .team_mask{
@@ -86,7 +86,7 @@
 	animation:h2_1 forwards 0.5s 0.5s ease-out;
 }
 @keyframes add{
-	from { opacity: 0;}
+	from { opacity: 0;transform:scale(1.2);}
 	to { opacity: 1;transform:scale(1);}
 }
 @keyframes h3{

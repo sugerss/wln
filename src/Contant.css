@@ -10,6 +10,9 @@
 	margin-right: -15px;
 	transition:0.5s;
 }
+.add_bar:last-of-type{
+	border-bottom: 1px solid #E2231A;
+}
 .add_title{
 	text-align:center;
 	color: #B0B1B1;
@@ -74,6 +77,6 @@
 }
 #allmap{
 	width:65%;
-	height: 500px;
+	height: 700px;
 	position:static;
 }

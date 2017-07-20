@@ -15,6 +15,8 @@ import Team from './Team';
 import Press from './Press';
 import Live from './Live';
 import Contant from './Contant';
+import ewm from './img/QRcode_ogilvy_home.png';
+import sxin from './img/sxin.png';
 import logo_1 from './img/logo_ogilvy_sm_white.png';
 import logo_2 from './img/logo_ogilvy_sm.png';
 import searchOne from './img/search_1.png';
@@ -154,7 +156,9 @@ class Better extends Component {
             <p className='clear'><a>加入我们</a><span></span></p>
           </div>
           <div className='right about_our'>
-            <p>关注我们</p>
+            <p>关注我们</p><br/>
+            <img src={ewm} alt=""/>
+            <img className="sxin" src={sxin} alt=""/>
           </div>
         </div>
         <div className='Copyright_box clear'>

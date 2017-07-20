@@ -2,13 +2,13 @@
 	padding-top: 28px;
 	text-align: center;
 	margin: 0 auto;
-	font-family: 'dinbold', Arial, Helvetica, sans-serif;
 }
 .history_title h2{
 	height: 44px;
 	line-height: 44px;
 	font-weight: 100;
     font-size: 40px;
+    margin-bottom:5px;
 }
 .history_title h3{
 	color: #B0B0B0;
@@ -56,7 +56,7 @@
 	background-image: url(img/timeline-moment-icon.png);
 	background-size: 18px 18px;	
 }
-.time_cir{
+.time_cir:last-of-type{
 	bottom: 0;
 }
 .timeline{
