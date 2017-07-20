@@ -1,0 +1,95 @@
+.works{
+	width: 100%;
+	height: 900px;
+	background: #fff;
+	cursor: pointer;
+}
+.works ul{
+	width: 100%;
+	height: 100%;
+}
+.works ul li{
+	float: left;
+	width: 33.3%;
+	height: 100%;
+}
+.works li .text{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	text-align: center;
+	color: #fff;
+}
+.works li .text:hover .mask{
+	display: block;
+	transition: 0.5s;
+}
+.works li .text:hover .circle{
+	opacity: 1;
+	transition: 0.3s;
+}
+.works li .text:hover .year{
+	transition: 0.3s ease-out;
+	opacity: 0;
+	transform: translateY(12px);
+}
+.works li .text .mask{
+	width: 100%;
+	height: 100%;
+	background: rgba(54,56,57,0.85);
+	display: none;
+}
+.works li p{
+	position: absolute;
+	left: 0;
+	top: 390px;
+	width: 100%;
+	font-weight: 100;
+	font-size: 21px;
+	line-height: 25px;
+	margin-top: 10px;
+	text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+.works li h3{
+	position: absolute;
+	left: 0;
+	top: 425px;
+	width: 100%;
+	font-weight: 100;
+	font-size: 40px;
+	line-height: 48px;
+	text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+} 
+.works li .year{
+	position: absolute;
+	top: 476px;
+}
+.works li .video{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 496px; 
+}
+.works .video .circle{
+	width: 60px;
+	height: 60px;
+	margin: 0 auto;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	position: relative;
+	opacity: 0;
+	background: transparent;
+}
+.works .video .circle:hover{
+	background: #fff;
+}
+.works .video .circle:hover .video2{
+	z-index: 2;
+}
+.works .video .circle img{
+	position: absolute;
+	top: 15px;
+	left: 20px;
+}
+
+

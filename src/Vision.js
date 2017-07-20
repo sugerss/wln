@@ -17,7 +17,7 @@ class Vision extends Component {
         </div>
         <div className='vision_box'>
         	<div className='user_vision'>
-	        	<div className='con'>
+	        	<div className='wrap'>
 	        		<div className='user_vision_inner background clear'>
 	        			<div className='left user_vision_word'>
 	        				<h1>我们的愿景</h1>
@@ -36,7 +36,7 @@ class Vision extends Component {
 	        	</div>
 	        </div>
 	        <div className='user_culture'>
-	        	<div className='con'>
+	        	<div className='wrap'>
 	        		<div className='user_culture_inner background clear'>
 	        			<div className='right user_culture_word'>
 	        				<h1>我们的文化</h1>

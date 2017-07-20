@@ -1,0 +1,79 @@
+.press h3{
+	padding: 28px 0;
+	font-size: 40px;
+	font-weight: 100;
+	line-height: 44px;
+	color: #303030;
+}
+.press .news{
+	width: 100%;
+	padding-top: 40px;
+}
+.press .news>p{
+	color: #1a1a1a;
+	font-size: 16px;
+	line-height: 26px;
+	font-weight: 400;
+}
+.press .news li{
+	margin-bottom: 100px;
+	width: 100%;
+}
+.press li .news_text{
+	width: 70%;
+}
+.press li .news_text div{
+	padding: 0 50px 23px 0;
+	border-right: 2px solid #E2231A;
+}
+.press li .news_text h4{
+	font-size: 24px;
+	line-height: 28px;
+}
+.press li .news_text h4 a{
+	font-size: 24px;
+	line-height: 28px;
+	color: #E2231A;	
+}
+.press li .news_text h4 a:hover{
+	text-decoration: underline;
+}
+.press li .news_text h5{
+	margin-bottom: 30px;
+	color: #959595;
+	font-size: 18px;
+	font-weight: 400;	
+}
+.press li .news_text p{
+	font-size: 14px;
+	line-height: 20px;
+	color: #1A1A1A;	
+}
+.press li .news_date{
+	width: 30%;
+}
+.press li .news_date div{
+	padding-left: 50px;
+}
+.press li .news_date h4{
+	font-size: 40px;
+	line-height: 40px;
+	color: #1a1a1a;
+	font-weight: 400;
+}
+.press li .news_more{
+	margin-top: 15px;
+}
+.press li .news_more a{
+	font-weight: 400;
+	border: 1px solid #E2231A;
+	float: left;
+}
+.press li .news_more a button{
+	background: #E2231A;
+	margin: 4px;
+	padding: 8px 20px;
+	color: #fff;
+	font-size: 16px;
+	line-height: 20px;
+}

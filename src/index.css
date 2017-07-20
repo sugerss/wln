@@ -1,12 +1,36 @@
+.wrap{
+	width:1100px;
+}
+@media only screen and (min-width: 1100px){
+	{padding: 40px;}
+}
+
+@media only screen and (max-width: 1200px){
+	.wrap{
+		width:950px;
+		margin: auto;
+	}
+}
+
 body{
 	font-size: 13px;
 	color: #1a1a1a;
-	background-color: #ddd;
 }
 :lang(zh-CN) body {
     font-family: 黑体,STHeiti, 'libre_baskervilleregular', Arial, Helvetica, sans-serif;
 }
-.wrap{
+.location{
+	position: absolute;
+	top: 0; left:0;
+	width:100%;
+	height:100%;
+	cursor: pointer;
+}
+.background{
+	background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+}
+.Container{
 	width:100%;
 	height: 100%;
 }
@@ -23,6 +47,7 @@ body{
 	height: 90px;
 	width:122px;
 	margin:0 20px;
+	overflow: hidden;
 }
 .nav{
 	height:100%;
@@ -37,7 +62,7 @@ body{
 	line-height: 30px;
 	float: left;
 	border-bottom: 3px solid transparent;
-	color: #000;
+	color: #fff;
 	height: auto;
 	padding: 26px 30px 0px;	
 }
@@ -151,9 +176,16 @@ body{
 }
 .foot_box .needlist p:first-of-type{
 	margin-bottom: 22px;
+	display: inline-block;
 	font-weight: 100;
 	padding: 0 150px 5px 0px;
 	border-bottom: 1px solid #fff;
+}
+.needlist{
+	width: 66%;
+}
+.about_our{
+	width: 34%;
 }
 .needlist p span{
 	width: 0;
@@ -165,6 +197,7 @@ body{
 	margin: 7px 0 0 5px;
 }
 .foot_box .about_our p:first-of-type{
+	display: inline-block;
 	padding: 0 100px 5px 0px;
 	border-bottom: 1px solid #fff;
 }
@@ -205,7 +238,9 @@ body{
 	font-size: 15px;
 	line-height: 53px;
 }
-
+.Contant,.works,.Vision,.Team,.servies,.press,.Home,.History,.points,.Live{
+	margin-top: 1px;
+}
 
 
 

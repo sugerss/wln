@@ -2,10 +2,6 @@
     font-size: 24px;
     line-height: 28px;
 }
-.background{
-	background-size: auto 100% !important;
-    background-repeat: no-repeat !important;
-}
 .content_top_word{
 	box-sizing: border-box;
     padding-left: 15px;
@@ -29,10 +25,6 @@
 .user_vision{
 	background-color: #fff;
 }
-.con{
-	width: 950px;
-	margin: 0 auto;
-}
 .vision_box h1{
 	font-size: 40px;
     line-height: 50px;
@@ -53,10 +45,13 @@
     font-weight: normal;
 }
 .user_vision_inner{
-	padding: 20px 15px;
-	box-sizing: border-box;
 	background-image: url(img/ogilvy_our_vision4_bg.png);
     background-position: 90% 50% !important;
+}
+.user_culture_inner,.user_vision_inner{
+	padding: 20px 15px;
+	box-sizing: border-box;
+	background-size: auto 100% !important;
 }
 .user_vision_word{
 	width:66.66666667%;
@@ -67,8 +62,6 @@
 	margin-bottom: 50px;
 }
 .user_culture_inner{
-	padding: 20px 15px;
-	box-sizing: border-box;
 	background-image: url(img/ogilvy_our_culture5_bg.png);
     background-position: 0% center;
 }

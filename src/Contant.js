@@ -1,12 +1,45 @@
 import React, { Component } from 'react';
 import './Contant.css';
 
+
 class Contant extends Component {
-  render() {
+    componentDidMount(){
+        var BMap = window.BMap
+        var map = new BMap.Map("allmap",{minZoom:4,maxZoom:15}); 
+        map.centerAndZoom(new BMap.Point(116.404, 39.915), 11); 
+        map.addControl(new BMap.MapTypeControl()); 
+        map.setCurrentCity("北京"); 
+        map.enableDragging();   
+        map.enableScrollWheelZoom(true); 
+        var json_data = [[116.404,39.915],[116.383752,39.91334],[116.384502,39.932241]];
+        var pointArray = new Array();
+        for(var i=0;i<json_data.length;i++){
+            var marker = new BMap.Marker(new BMap.Point(json_data[i][0], json_data[i][1])); // 创建点
+            map.addOverlay(marker);    //增加点
+            pointArray[i] = new BMap.Point(json_data[i][0], json_data[i][1]);
+            //marker.addEventListener("click",attribute);
+        }
+        //让所有点在视野范围内
+        map.setViewport(pointArray);
+    }
+    handclick(e){
+        var add_bar=document.querySelector('.add_bar');
+        var add_title=document.querySelector('.add_title');
+        var trigon=document.querySelector('.trigon');
+        //var add_bar_more=document.querySelector('.add_bar_more');
+        console.log(e)
+        trigon.style.transform='rotate(-180deg)';
+        trigon.style.borderTopColor='#fff';
+        add_title.style.color='#fff';
+        add_bar.style.backgroundColor='#E2231A';
+        add_bar.children[1].style.display='block';
+        add_bar.children[1].style.height='247px';
+    }
+    render() {
     return (
       <div className="Contant clear">
         <div className='add_list left'>
-        	<div className='add_bar'>
+        	<div className='add_bar' onClick={this.handclick}>
         		<div className='add_title clear'>
         			<span className='add_button'>北京
         				<span className='trigon right'></span>
@@ -91,7 +124,7 @@ Gulou District, Nanjing</p>
         		</div>
         	</div>
         </div>
-        <div id="allmap" className='left'></div>
+        <div id="allmap" className='right'></div>
       </div>
     );
   }

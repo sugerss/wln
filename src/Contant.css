@@ -1,18 +1,18 @@
-body{
-	background-color: #fff;
-}
 .Contant{
 	background-color: #ffffff;
 }
 .add_list{
 	width: 33.33333333%;
+	background-color: #fff;
 }
 .add_bar{
 	border-top: 1px solid #E2231A;
 	margin-right: -15px;
+	transition:0.5s;
 }
 .add_title{
 	text-align:center;
+	color: #B0B1B1;
 }
 .add_button{
 	display: block;
@@ -21,25 +21,27 @@ body{
     cursor: pointer;
     z-index: 90;
     font-weight: 600;
-    padding: 10px 0 15px 15px;
-    color: #B0B1B1;
+    padding: 10px 0 15px 15px;    
     font-size: 24px;
     text-align: center;
     line-height: 30px;
 }
 .trigon{
+	transition:0.5s;
 	display: block;
 	width:0;
 	height:0;
+	margin-right:15px;
 	margin-top: 10px;
 	border:10px solid transparent;
 	border-top-color: #B0B1B1;
 	border-radius: 4px;
+	transition:0.5s;
 }
 .add_bar_more{
 	display: none;
-	/*height: 247px;*/
 	height: 0;
+	transition:0.5s;
 	background-color: #E2231A;
 	padding: 20px 0 0 10px;
 }
@@ -70,13 +72,8 @@ body{
     display: inline-block;
     background: #fff;
 }
-
-
-
-
-
-
-
 #allmap{
-	width:66.66666667%;
+	width:65%;
+	height: 500px;
+	position:static;
 }

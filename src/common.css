@@ -9,6 +9,7 @@ q:before,q:after{content:'';}
 input[type="checkbox"]{-webkit-appearance:checkbox;vertical-align: middle;display:inline-block;}
 input[type="radio"]{-webkit-appearance:radio;vertical-align: middle;display:inline-block;}
 a{ text-decoration: none;}
+button{outline: none;border:none;}
 .clear:after{ content: ''; display: block; clear: both;}
 .hidden{display: none; }
 .width{width: 100%;}

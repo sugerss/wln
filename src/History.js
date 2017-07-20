@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './History.css';
+import './History.css';//ogilvy-history-in-china-newspaper-advertsing.jpg
 import timeline from './img/timeline-moment-icon.png';
 import ogilvy from './img/ogilvy-history-in-china-newspaper-advertsing.jpg';
 import China_Team from './img/1991_Ogilvy_China_Team.jpg';
@@ -13,7 +13,7 @@ import CDparticipants from './img/MG_3531-CDparticipants-655x437.jpg';
 class History extends Component {
   render() {
     return (
-      <div className="History section_inner">
+      <div className="History wrap">
         <div className='history_title'>
         	<h2>奥美中国历史</h2>
         	<h3>二十多年的沧海桑田，中国发生了翻天覆地的变化，而奥美则见证了每一步的前进， 点滴的增长……</h3>

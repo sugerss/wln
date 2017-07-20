@@ -1,0 +1,50 @@
+.servies{
+	width: 100%;
+}
+.servies ul{
+	width: 100%;
+	min-height: 118px;
+}
+.servies li{
+	float: left;
+	width: 25%;
+}
+.servies li .servies_img{
+	height: 202px;
+}
+.servies li .servies_img>div{
+	width: 100%;
+	position: relative;
+}
+.servies li .servies_img:hover .active_image{
+	display: none;
+}
+.servies li .servies_img a{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.servies li .servies_img img{
+	width: 100%;
+}
+.servies li .servies_img .active_image{
+	position: inherit;
+	top: 0;
+	left: 0;
+}
+.servies li .servies_title{
+	text-align: center;
+}
+.servies li .servies_title h3{
+	margin-bottom: 50px;
+}
+.servies li .servies_title h3 a{
+	font-size: 24px;
+	line-height: 28px;
+	color: #959595;
+}
+.servies li .servies_title h3 a:hover{
+	color: #e2231a;
+}
