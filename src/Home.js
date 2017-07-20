@@ -8,13 +8,15 @@ class Home extends Component {
   }
   Service(){
     var service=document.querySelector('.service');
+    var full=document.querySelector('.full');
+    var ScrollTop=document.body.scrollTop||document.documentElement.scrollTop;
     var life=document.querySelector('.service');
     var services_wrap=document.querySelector('.services_wrap');
     var row_pad=document.querySelector('.row_pad');
     var row_padding=document.querySelector('.row_padding');
     var past_word=document.querySelector('.past_word');
     var life_word=document.querySelector('.life_word');
-    if(document.body.scrollTop>=service.offsetTop-166){
+    if(ScrollTop>=service.offsetTop-166){
       services_wrap.style.opacity='1';
       services_wrap.style.left='200px';   
       row_pad.style.opacity='1';
@@ -22,12 +24,16 @@ class Home extends Component {
       row_padding.style.opacity='1';
       row_padding.style.right='0'; 
     }
-    if(document.body.scrollTop>=life.offsetTop-100){
+    if(ScrollTop>=life.offsetTop-100){
       past_word.style.opacity='1';
       past_word.style.left='0'; 
       life_word.style.opacity='1';
       life_word.style.right='0'; 
     }
+    if(ScrollTop>full.offsetTop){
+      full.style.transform="translateY("+ScrollTop-full.offsetTop+"px)";
+    }
+
   }
   render() {
     return (

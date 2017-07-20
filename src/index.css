@@ -38,6 +38,23 @@ body{
     background: #363636;
     color: #fff;
 }
+.fixed{
+	z-index: 999;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border: 2px solid #e8e8e8;
+	background: url(img/arrows.png) no-repeat center;
+	box-sizing: content-box;
+	transition: 0.2s;
+	opacity: 0;
+}
+.fixed:hover{
+	background-color: #e8e8e8;
+}
 .header{
 	height: 100%;
 	width:100%;

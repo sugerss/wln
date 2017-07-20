@@ -3,6 +3,7 @@ header {
 	padding: 0 15px;
 }
 .full{
+	background: #000;
 	box-sizing: border-box;
 	position: relative;
 	padding:0 15px;
@@ -16,6 +17,24 @@ header {
 	color: #fff;
 	transition: opacity .9s linear;
 	text-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+}
+.full p:first-of-type{
+	animation:ani 2s forwards ease-out;
+	transform:scale(0);
+	transform-origin:center;
+}
+@keyframes ani {
+	from{transform:scale(0);}
+	to{transform:scale(1);}
+}
+.full p:last-of-type{
+	animation:an 2s forwards ease-out 1.5s;
+	transform:scale(0);
+	transform-origin:center;
+}
+@keyframes an {
+	from{transform:scale(0);}
+	to{transform:scale(1);}
 }
 .focus{
 	height: 500px;

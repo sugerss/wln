@@ -57,21 +57,23 @@ class Better extends Component {
   onscroll(e){
     var header=document.querySelector('#header');
     var logo=document.querySelector('.logo');
+    var fixed=document.querySelector('.fixed');
     var a=header.querySelectorAll('li>a');
     var service=document.querySelector('#service');
+    var Scroll=document.body.scrollTop||document.documentElement.scrollTop;
     if(window.location.href=='http://localhost:3000/'){
       logo.children[0].src=logo_1;
-      if(document.body.scrollTop>100){
+      if(Scroll>100){
         header.style.height=0;
         logo.children[0].style.cssText='height:50px; width:50%; margin-top:12px;';
-        if(document.body.scrollTop>400){
+        if(Scroll>400){
           header.style.cssText=`background:#fff; height:66px; position:fixed;top:0; z-index:100; transition:0.2s;`;
           for(var i=0;i<a.length;i++){
             a[i].style.color='#000';
           }
           logo.children[0].src=logo_2;
           logo.children[0].style.cssText='height:50px; width:50%; margin-top:12px;';
-        }else if(document.body.scrollTop<400){
+        }else if(Scroll<400){
           header.className='header';
           for(var i=0;i<a.length;i++){
             a[i].style.color='#fff';
@@ -82,18 +84,43 @@ class Better extends Component {
       } 
     }else{
       logo.children[0].src=logo_2;
-        if(document.body.scrollTop>400){
+        if(Scroll>400){
           header.style.cssText=`background:#fff; height:66px; position:fixed;top:0; z-index:100; transition:0.3s;`;
           logo.children[0].style.cssText='height:50px; width:50%; margin-top:12px;';
-        }else if(document.body.scrollTop<400){
+        }else if(Scroll<400){
           header.style.cssText=`position:static;height:90px;`;
           logo.children[0].style.cssText='width:122px; margin-top:0;';     
         }   
-    } 
+    }
+
+    if(Scroll>document.documentElement.clientHeight){
+      fixed.style.opacity=1;
+    }
+    else{
+      fixed.style.opacity=0;
+    }
+  }
+  handleClick(){
+    var fixed=document.querySelector('.fixed');
+    var Scroll=document.body.scrollTop||document.documentElement.scrollTop;
+    var t=null;
+    clearInterval(t);
+    t=setInterval(function(){
+      if(Scroll<=0){
+        clearInterval(t);
+        document.body.scrollTop=document.documentElement.scrollTop=0;
+      }
+      if(Scroll<=document.documentElement.clientHeight){
+         fixed.style.opacity=0; 
+      }
+      Scroll-=30;
+      document.body.scrollTop=document.documentElement.scrollTop=Scroll;
+    },10);
   }
   render(){
     return (<Router>
     <div className='Container' onWheel={this.onscroll} onLoad={this.change}>
+      <div className="fixed" onClick={this.handleClick}></div>
       <div className='header clear' id='header'>
         <a className='logo left'><img src={logo_1}/></a>
         <ul className='nav left'>      
