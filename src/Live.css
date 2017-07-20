@@ -62,7 +62,9 @@
 .banner_one{
 	width: calc( 100% / 3 );
 }
-
+.live_banner_third{
+	height: 500px;
+}
 
 
 

@@ -36,26 +36,7 @@ class Live extends Component {
         		<div className='rbtn btn'>&gt;</div>
         	</div>
         </div>
-        <div className='live_banner_third clear'>
-        	<div className='left banner_one'>
-        		<a className='location'></a>
-        		<ul className='focus_three'></ul>
-        		<div className='lbtn btn'>&lt;</div>
-        		<div className='rbtn btn'>&gt;</div>
-        	</div>
-        	<div className='left banner_one'>
-        		<a className='location'></a>
-        		<ul className='focus_three'></ul>
-        		<div className='lbtn btn'>&lt;</div>
-        		<div className='rbtn btn'>&gt;</div>
-        	</div>
-        	<div className='left banner_one'>
-        		<a className='location'></a>
-        		<ul className='focus_three'></ul>
-        		<div className='lbtn btn'>&lt;</div>
-        		<div className='rbtn btn'>&gt;</div>
-        	</div>
-        </div>
+        
         <div className='live_banner_second clear'>
         	<div className='left banner_left'></div>
         	<div className='right'></div>

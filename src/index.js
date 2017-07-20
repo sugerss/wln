@@ -122,7 +122,7 @@ class Better extends Component {
     <div className='Container' onWheel={this.onscroll} onLoad={this.change}>
       <div className="fixed" onClick={this.handleClick}></div>
       <div className='header clear' id='header'>
-        <a className='logo left'><img src={logo_1}/></a>
+        <a className='logo'><img src={logo_1}/><img src={logo_2}/></a>
         <ul className='nav left'>      
         <li><Link to="/">主页</Link></li>
         <li>
@@ -149,6 +149,42 @@ class Better extends Component {
         </li>
         <li><Link to="/contant">联系我们</Link></li>
       </ul>
+      <div className='mobile_menu_button'><span></span></div>
+      <div className='nav_phone'>
+        <ul className='phone_list'>
+          <li className='mobile_menu'><Link to="/">
+            <span className='menu_word'>主页</span></Link>
+          </li>
+          <li className='mobile_menu'><a>
+            <span className='menu_word'>作品</span>
+            <ul className='sub_menu'>
+              <li><Link to="/works">作品</Link></li>
+              <li><Link to="/points">奥美观点</Link></li>
+            </ul>
+            <span className='mobile_arrow'>&gt;</span></a>
+          </li>
+          <li className='mobile_menu'><Link to="/servies"><span className='menu_word'>我们的服务</span></Link></li>
+          <li className='mobile_menu'><a>
+            <span className='menu_word'>关于奥美</span>
+            <ul className='sub_menu'>
+              <li><Link to="/vision">奥美愿景</Link></li>
+              <li><Link to="/history">奥美中国历史</Link></li>
+              <li><Link to="/team">我们的领导团队</Link></li>
+            </ul>
+            <span className='mobile_arrow'>&gt;</span></a>
+          </li>
+          <li className='mobile_menu'><a>
+            <span className='menu_word'>奥美新闻</span>
+            <ul className='sub_menu'>
+              <li><Link to="/press">新闻稿</Link></li>
+              <li><Link to="/live">奥美生活</Link></li>
+
+            </ul>
+            <span className='mobile_arrow'>&gt;</span></a>
+          </li>
+          <li className='mobile_menu'><Link to="/contant"><span className='menu_word'>联系我们</span></Link></li>
+        </ul>
+      </div>
       <div className='right header_inner'>
         <a className='search left'><img src={searchOne}/></a>
         <div className='select right'>
@@ -174,7 +210,7 @@ class Better extends Component {
       <Route path="/live" component={Live}/>
       <Route path="/contant" component={Contant}/>
       <div className='footer_box'>
-        <div className='foot_box clear'>
+        <div className='foot_box wrap clear'>
           <div className='left needlist'>
             <p>需要什么帮忙</p>
             <p className='clear'><a>查看我们的作品</a><span></span></p>
