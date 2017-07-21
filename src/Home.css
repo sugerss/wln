@@ -174,10 +174,10 @@ a.btn_black span{
 	position: absolute;
 }
 .service{
-	height: 500px;
 	position: relative;
 	background-color: #ccc;
 	vertical-align: middle;
+	overflow: hidden;
 }
 .services{
 	width: 66.66666667%;
@@ -329,12 +329,11 @@ a.btn_black span{
 
 .life_go .mask_bg{background-color:rgba(237, 34, 36, 0.54); }
 .life{
-	height: 500px;
 	overflow: hidden;
 }
 .life_go,.past{
 	width:50%;
-	height: 100%;
+	height: 500px;
 	position: relative;
 }
 .past_word{
