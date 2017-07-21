@@ -1,3 +1,43 @@
+@import '~antd/dist/antd.css';
+.live_life .ant-carousel {
+	float: left;
+	width:calc( 100% - (100% / 3 ));
+	height: 500px;
+}
+.live_life .ant-carousel .slick-slide {
+  text-align: center;
+  height: 500px;
+  line-height: 500px;
+  background: #364d79;
+  overflow: hidden;
+}
+
+.live_life .ant-carousel .slick-arrow:hover{
+	background-color: #fff;
+	color: #8a8a8a;
+}
+.live_life .ant-carousel .slick-prev,.ant-carousel .slick-next{
+	 width:42px;
+	height:44px;
+	color: #fff;
+	text-align: center;
+	line-height: 44px;	
+	font-size: 25px;
+	border-radius: 50%;
+	transition:0.6s;
+	z-index: 10;
+}
+.live_life .ant-carousel .slick-prev{
+	left: 15px;
+}
+.live_life .ant-carousel .slick-next{
+	right: 15px;
+}
+.live_life .ant-carousel .slick-slide h3 {
+  color: #fff;
+}
+
+
 .live_life{
 	height: 1000px;
 }
@@ -38,8 +78,12 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+	width: 300%;
 }
 .banner_first{
+	width: 100%;
+	height: 100%;
+	background: #0f0;
 	position: relative;
 	border:none;
 }
@@ -80,19 +124,6 @@
 .rbtn{
 	right:15px;
 }
-
-<<<<<<< HEAD
-=======
-.banner_one{
-	width: calc( 100% / 3 );
-}
-.live_banner_third{
-	height: 500px;
-}
-
->>>>>>> origin/master
-
-
 
 
 

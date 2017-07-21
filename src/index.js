@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router , HashRouter , Match , Route , Link ,IndexLink } from 'react-router-dom';
 import $ from 'jquery';
+import Button from 'antd/lib/button'
 import createHistory from 'history/createBrowserHistory';
 import './common.css';
 import './index.css';
