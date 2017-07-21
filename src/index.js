@@ -4,7 +4,6 @@ import { BrowserRouter as Router , HashRouter , Match , Route , Link ,IndexLink 
 import $ from 'jquery';
 import createHistory from 'history/createBrowserHistory';
 import './common.css';
-import './index.css';
 import Home from './Home';
 import Works from './Works';
 import Points from './Points';
@@ -15,6 +14,7 @@ import Team from './Team';
 import Press from './Press';
 import Live from './Live';
 import Contant from './Contant';
+import './index.css';
 import ewm from './img/QRcode_ogilvy_home.png';
 import sxin from './img/sxin.png';
 import logo_1 from './img/logo_ogilvy_sm_white.png';
@@ -63,25 +63,27 @@ class Better extends Component {
     var Scroll=document.body.scrollTop||document.documentElement.scrollTop;
     if(window.location.href=='http://localhost:3000/'){
       logo.children[0].src=logo_1;
-      if(Scroll>100){
-        header.style.height=0;
-        logo.children[0].style.cssText='height:50px; width:50%; margin-top:12px;';
-        if(Scroll>400){
-          header.style.cssText=`background:#fff; height:66px; position:fixed;top:0; z-index:100; transition:0.2s;`;
-          for(var i=0;i<a.length;i++){
-            a[i].style.color='#000';
-          }
-          logo.children[0].src=logo_2;
+      if(window.innerWidth>1000){
+        if(Scroll>100){
+          header.style.height=0;
           logo.children[0].style.cssText='height:50px; width:50%; margin-top:12px;';
-        }else if(Scroll<400){
-          header.className='header';
-          for(var i=0;i<a.length;i++){
-            a[i].style.color='#fff';
-          }
-          logo.children[0].src=logo_1;
-          logo.children[0].style.cssText='width:122px; margin-top:0;';
-        }   
-      } 
+          if(Scroll>400){
+            header.style.cssText=`background:#fff; height:66px; position:fixed;top:0; z-index:100; transition:0.2s;`;
+            for(var i=0;i<a.length;i++){
+              a[i].style.color='#000';
+            }
+            logo.children[0].src=logo_2;
+            logo.children[0].style.cssText='height:50px; width:50%; margin-top:12px;';
+          }else if(Scroll<400){
+            header.className='header';
+            for(var i=0;i<a.length;i++){
+              a[i].style.color='#fff';
+            }
+            logo.children[0].src=logo_1;
+            logo.children[0].style.cssText='width:122px; margin-top:0;';
+          }   
+        } 
+      }
     }else{
       logo.children[0].src=logo_2;
         if(Scroll>400){
@@ -117,6 +119,16 @@ class Better extends Component {
       document.body.scrollTop=document.documentElement.scrollTop=Scroll;
     },10);
   }
+  show(){
+    var header=document.querySelector('.header');
+    var nav_phone=document.querySelector('.nav_phone');  
+    if(nav_phone.style.display=='block'){
+      nav_phone.style.display='none';
+    }else{
+      header.style.height='100%';
+      nav_phone.style.display='block';
+    }
+  }
   render(){
     return (<Router>
     <div className='Container' onWheel={this.onscroll} onLoad={this.change}>
@@ -149,7 +161,7 @@ class Better extends Component {
         </li>
         <li><Link to="/contant">联系我们</Link></li>
       </ul>
-      <div className='mobile_menu_button'><span></span></div>
+      <div className='mobile_menu_button' onClick={this.show}><span></span></div>
       <div className='nav_phone'>
         <ul className='phone_list'>
           <li className='mobile_menu'><Link to="/">
@@ -178,7 +190,6 @@ class Better extends Component {
             <ul className='sub_menu'>
               <li><Link to="/press">新闻稿</Link></li>
               <li><Link to="/live">奥美生活</Link></li>
-
             </ul>
             <span className='mobile_arrow'>&gt;</span></a>
           </li>
