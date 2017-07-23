@@ -2,22 +2,20 @@
 .live_life .ant-carousel {
 	float: left;
 	width:calc( 100% - (100% / 3 ));
-	height: 500px;
 }
-.live_life .ant-carousel .slick-slide {
+.ant-carousel .slick-slide {
   text-align: center;
   height: 500px;
   line-height: 500px;
   background: #364d79;
   overflow: hidden;
 }
-
-.live_life .ant-carousel .slick-arrow:hover{
+.ant-carousel .slick-arrow:hover{
 	background-color: #fff;
 	color: #8a8a8a;
 }
-.live_life .ant-carousel .slick-prev,.ant-carousel .slick-next{
-	 width:42px;
+.ant-carousel .slick-prev,.ant-carousel .slick-next{
+	width:42px;
 	height:44px;
 	color: #fff;
 	text-align: center;
@@ -26,17 +24,31 @@
 	border-radius: 50%;
 	transition:0.6s;
 	z-index: 10;
+	margin-top: -22px;
 }
-.live_life .ant-carousel .slick-prev{
+.ant-carousel .slick-prev::before,.ant-carousel .slick-next::before{
+	display: none;
+}
+.ant-carousel .slick-prev{
 	left: 15px;
 }
-.live_life .ant-carousel .slick-next{
+.ant-carousel .slick-next{
 	right: 15px;
 }
-.live_life .ant-carousel .slick-slide h3 {
+.ant-carousel .slick-slide h3 {
   color: #fff;
 }
 
+.live_banner_second .ant-carousel {
+	float: left;
+	width: 50%;
+	height: 500px;
+}
+.live_banner_third .ant-carousel {
+	float: left;
+	width: calc( 100% / 3);
+	height: 500px;
+}
 
 .live_life{
 	height: 1000px;
@@ -91,10 +103,6 @@
 	width: calc( 100% / 3 );
 	height: 500px;
 	position: relative;
-}
-.banner_left{
-	position: relative;
-	width:50%;
 }
 .banner_right{
 	width:50%;
