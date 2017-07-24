@@ -84,7 +84,7 @@
 	width:50%;
 }
 
-/* @media only screen and (min-width: 768px) {
+@media screen and (max-width: 768px) {
 	.live_box,.live_life .ant-carousel,.live_banner_second .ant-carousel,.live_banner_third .ant-carousel{
 		width: 100%;
 	}
@@ -92,7 +92,7 @@
 		display: none;
 	}
 }
- */
+
 
 
 

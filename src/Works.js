@@ -15,12 +15,12 @@ class Works extends Component {
       				<h3>范德萨</h3>
       				<p className="year">2015</p>
       				<div className="mask"></div>
-					<div className="video">
-						<div className="circle">
-							<img className="video2" src={video2} />
-							<img src={video} />
-						</div>
-					</div>
+    					<div className="video">
+    						<div className="circle">
+    							<img className="video2" src={video2} />
+    							<img src={video} />
+    						</div>
+    					</div>
       			</div>
       		</li>
       		<li>
@@ -29,12 +29,12 @@ class Works extends Component {
       				<h3></h3>
       				<p className="year"></p>
       				<div className="mask"></div>
-					<div className="video">
-						<div className="circle">
-							<img className="video2" src={video2} />
-							<img src={video} />
-						</div>
-					</div>
+    					<div className="video">
+    						<div className="circle">
+    							<img className="video2" src={video2} />
+    							<img src={video} />
+    						</div>
+    					</div>
       			</div>
       		</li>
       		<li>
@@ -43,12 +43,12 @@ class Works extends Component {
       				<h3></h3>
       				<p className="year"></p>
       				<div className="mask"></div>
-					<div className="video">
-						<div className="circle">
-							<img className="video2" src={video2} />
-							<img src={video} />
-						</div>
-					</div>
+    					<div className="video">
+    						<div className="circle">
+    							<img className="video2" src={video2} />
+    							<img src={video} />
+    						</div>
+    					</div>
       			</div>
       		</li>
       	</ul>

@@ -159,8 +159,14 @@
     font-size: 21px;
     line-height: 25px;
 }
-.team_box{
 
+@media screen and (max-width: 768px){
+	.lions_box,.aifei_box{
+		width: 100%;
+	}
+	.history_box,.team_box{
+		width: 100%;
+	}
 }
 
 
