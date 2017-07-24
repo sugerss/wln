@@ -2,7 +2,7 @@
 	background-color: #ffffff;
 }
 .add_list{
-	width: 33.33333333%;
+	width: calc(100%/3);
 	background-color: #fff;
 }
 .add_bar{
@@ -76,7 +76,18 @@
     background: #fff;
 }
 #allmap{
-	width:65%;
+	width: calc((100%/3)*2);
 	height: 700px;
 	position:static;
+}
+@media screen and (max-width: 768px){
+	.add_list,#allmap{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 700px) {
+	#allmap{
+		width: 90%;
+		margin: 0 5%;
+	}	
 }

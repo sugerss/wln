@@ -16,16 +16,17 @@ class Press extends Component {
               <li className="clear">
                 <div className="news_text left">
                   <div>
-                    <h4>
+                    <h4 className="news_date"></h4>
+                    <h4  className="news_title">
                       <a>奥美新闻</a> 
                     </h4>
                     <h5>奥美新闻</h5>
                     <p>奥美新闻</p>
                   </div>
                 </div>
-                <div className="news_date left">
+                <div className="news_detail left">
                   <div>
-                    <h4></h4> 
+                    <h4 className="views_date"></h4> 
                     <div className="news_more">
                       <a>
                         <button>继续阅读</button>

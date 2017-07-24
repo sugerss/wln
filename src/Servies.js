@@ -36,11 +36,9 @@ class Servies extends Component {
           <li>
             <div className="servies_img">
               <div>
-                <a>
-                  <img className="active_image" src={brand} />
-                  <img src={ani_brand} />
-                </a>
-              </div>
+                <img className="active_image" src={brand} />
+                <img src={ani_brand} />
+              </div>  
             </div>
             <div className="servies_title">
               <h3>
@@ -51,11 +49,9 @@ class Servies extends Component {
           <li>
             <div className="servies_img">
               <div>
-                <a>
-                  <img className="active_image" src={brand} />
-                  <img src={ani_brand} />
-                </a>
-              </div>
+                <img className="active_image" src={brand} />
+                <img src={ani_brand} />
+              </div>  
             </div>
             <div className="servies_title">
               <h3>
@@ -66,11 +62,9 @@ class Servies extends Component {
           <li>
             <div className="servies_img">
               <div>
-                <a>
-                  <img className="active_image" src={brand} />
-                  <img src={ani_brand} />
-                </a>
-              </div>
+                <img className="active_image" src={brand} />
+                <img src={ani_brand} />
+              </div>  
             </div>
             <div className="servies_title">
               <h3>
@@ -81,11 +75,9 @@ class Servies extends Component {
           <li>
             <div className="servies_img">
               <div>
-                <a>
-                  <img className="active_image" src={brand} />
-                  <img src={ani_brand} />
-                </a>
-              </div>
+                <img className="active_image" src={brand} />
+                <img src={ani_brand} />
+              </div>  
             </div>
             <div className="servies_title">
               <h3>
@@ -96,11 +88,9 @@ class Servies extends Component {
           <li>
             <div className="servies_img">
               <div>
-                <a>
-                  <img className="active_image" src={brand} />
-                  <img src={ani_brand} />
-                </a>
-              </div>
+                <img className="active_image" src={brand} />
+                <img src={ani_brand} />
+              </div>  
             </div>
             <div className="servies_title">
               <h3>

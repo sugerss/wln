@@ -13,16 +13,17 @@ class Points extends Component {
               <li className="clear">
                 <div className="views_text left">
                   <div>
-                    <h4>
+                    <h4 className="views_date"></h4>
+                    <h4 className="views_title">
                       <a>奥美</a> 
                     </h4>
                     <h5>奥美</h5>
                     <p>奥美</p>
                   </div>
                 </div>
-                <div className="views_date left">
+                <div className="views_detail left">
                   <div>
-                    <h4></h4> 
+                    <h4 className="views_date"></h4> 
                     <div className="views_more">
                       <a>
                         <button>继续阅读</button>

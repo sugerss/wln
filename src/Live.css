@@ -1,7 +1,7 @@
 @import '~antd/dist/antd.css';
 .live_life .ant-carousel {
 	float: left;
-	width:calc( 100% - (100% / 3 ));
+	width: 66.7%;
 }
 .ant-carousel .slick-slide {
   text-align: center;
@@ -12,7 +12,19 @@
 }
 .ant-carousel .slick-arrow:hover{
 	background-color: #fff;
+
+}
+.ant-carousel .slick-arrow a{
+	color: #fff;	
+}
+.ant-carousel .slick-arrow:hover a{
 	color: #8a8a8a;
+}
+.ant-carousel .slick-arrow a:visited{
+	color: #fff;
+}
+.ant-carousel .slick-prev::before,.ant-carousel .slick-next::before{
+	display: none;
 }
 .ant-carousel .slick-prev,.ant-carousel .slick-next{
 	width:42px;
@@ -26,9 +38,6 @@
 	z-index: 10;
 	margin-top: -22px;
 }
-.ant-carousel .slick-prev::before,.ant-carousel .slick-next::before{
-	display: none;
-}
 .ant-carousel .slick-prev{
 	left: 15px;
 }
@@ -38,30 +47,12 @@
 .ant-carousel .slick-slide h3 {
   color: #fff;
 }
-
-.live_banner_second .ant-carousel {
-	float: left;
-	width: 50%;
-	height: 500px;
-}
-.live_banner_third .ant-carousel {
-	float: left;
-	width: calc( 100% / 3);
-	height: 500px;
-}
-
 .live_life{
+	width: 100%;
 	height: 1000px;
 }
-.live_banner_second,.live_banner_third{
-	height: 500px;
-	background: #ccc;
-}
-.live_banner_third{
-	background: #ededed;
-}
 .live_box{
-	width:calc(100% / 3);
+	width: 33.3%;
 	height: 100%;
 	display: table;
     vertical-align: middle;
@@ -76,78 +67,32 @@
     transition: all 700ms ease;
     position: relative;
 }
-.live_banner{
-	width:calc( 100% - (100% / 3 ));
-	height: 500px;
-	vertical-align: middle;
-    text-align: center;
-    display: table;
-}
-.live_banner .live_inner{
-	background-color: rgb(0, 0, 0);
-}
-.slides{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 300%;
-}
-.banner_first{
+.live_banner_second,.live_banner_third{
 	width: 100%;
-	height: 100%;
-	background: #0f0;
-	position: relative;
-	border:none;
 }
-.banner_one{
-	width: calc( 100% / 3 );
+.live_banner_second .ant-carousel {
+	float: left;
+	width: 50%;
 	height: 500px;
-	position: relative;
+}
+.live_banner_third .ant-carousel {
+	float: left;
+	width: calc( 100% /3);
+	height: 500px;
 }
 .banner_right{
 	width:50%;
 }
-.btn{
-	position: absolute;
-	top:50%; 
-	margin-top: -22px;
-	width:42px;
-	height:44px;
-	color: #fff;
-	text-align: center;
-	line-height: 44px;	
-	font-size: 25px;
-	border-radius: 50%;
-	transition:0.6s;
-	z-index: 10;
-	cursor: pointer;
+
+/* @media only screen and (min-width: 768px) {
+	.live_box,.live_life .ant-carousel,.live_banner_second .ant-carousel,.live_banner_third .ant-carousel{
+		width: 100%;
+	}
+	.live_banner_second .banner_right{
+		display: none;
+	}
 }
-.btn:hover{
-	background-color: #fff;
-	color: #8a8a8a;
-}
-.lbtn{
-	left:15px;
-}
-.rbtn{
-	right:15px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ */
 
 
 

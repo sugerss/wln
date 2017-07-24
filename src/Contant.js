@@ -124,7 +124,7 @@ Gulou District, Nanjing</p>
         		</div>
         	</div>
         </div>
-        <div id="allmap" className='right'></div>
+        <div id="allmap" className='left'></div>
       </div>
     );
   }

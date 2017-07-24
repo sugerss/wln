@@ -26,9 +26,15 @@
 	padding: 0 50px 23px 0;
 	border-right: 2px solid #E2231A;
 }
-.press li .news_text h4{
+.press li .news_text .views_title{
 	font-size: 24px;
 	line-height: 28px;
+}
+.press li .views_text .views_date{
+	color: #808080;
+	font-size: 32px;
+	line-height: 32px;
+	display: none;
 }
 .press li .news_text h4 a{
 	font-size: 24px;
@@ -49,13 +55,13 @@
 	line-height: 20px;
 	color: #1A1A1A;	
 }
-.press li .news_date{
+.press li .news_detail{
 	width: 30%;
 }
-.press li .news_date div{
+.press li .news_detail div{
 	padding-left: 50px;
 }
-.press li .news_date h4{
+.press li .news_detail .news_date{
 	font-size: 40px;
 	line-height: 40px;
 	color: #1a1a1a;
@@ -76,4 +82,42 @@
 	color: #fff;
 	font-size: 16px;
 	line-height: 20px;
+}
+@media only screen and (max-width: 1000px){
+	.press .news{
+		padding-top: 0;
+	}
+}
+@media only screen and (max-width: 768px){
+	.press li .news_detail div{
+		padding-left: 25px;
+	}
+	.press li .news_more a button{
+		padding: 6px 10px;
+		font-size: 15px;
+	}
+	.press li .news_detail .news_date{
+		font-size: 32px;
+		line-height: 32px;
+	}
+	.press li .news_text div{
+		padding: 0 25px 23px 0;
+	}	
+}
+@media only screen and (max-width: 700px){
+	.press h3{
+		padding: 15px 0;
+	}
+	.press li .news_text .news_date{
+		display: block;
+	}
+	.press li .news_text{
+		width: 100%;
+	}
+	.press li .news_text div{
+		border-right: 0px solid #E2231A;
+	}
+	.press li .news_detail{
+		display: none;
+	}
 }

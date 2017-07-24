@@ -5,8 +5,8 @@ import $ from 'jquery';
 
 class Live extends Component {
   componentDidMount(){
-	$('.slick-prev').text("<");
-	$('.slick-next').text(">");
+	$('.slick-prev').html("<a><</a>");
+	$('.slick-next').html("<a>></a>");
   }
   render() {
     return (
@@ -64,7 +64,6 @@ class Live extends Component {
 				<div><h3>4</h3></div>
 			</Carousel>
         </div>
-        
         <div className='live_banner_second clear'>
         	<Carousel dots="false" arrows="true">
 				<div><h3>1</h3></div>

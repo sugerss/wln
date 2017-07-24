@@ -20,9 +20,15 @@
 	padding: 0 50px 23px 0;
 	border-right: 2px solid #E2231A;
 }
-.points li .views_text h4{
+.points li .views_text .views_title{
 	font-size: 24px;
 	line-height: 28px;
+}
+.points li .views_text .views_date{
+	color: #808080;
+	font-size: 32px;
+	line-height: 32px;
+	display: none;
 }
 .points li .views_text h4 a{
 	color: #E2231A;	
@@ -41,13 +47,13 @@
 	line-height: 20px;
 	color: #1A1A1A;	
 }
-.points li .views_date{
+.points li .views_detail{
 	width: 30%;
 }
-.points li .views_date div{
+.points li .views_detail div{
 	padding-left: 50px;
 }
-.points li .views_date h4{
+.points li .views_date{
 	font-size: 40px;
 	line-height: 40px;
 	color: #1a1a1a;
@@ -69,4 +75,34 @@
 	color: #fff;
 	font-size: 16px;
 	line-height: 20px;
+}
+@media only screen and (max-width: 768px){
+	.points li .views_detail div{
+		padding-left: 25px;
+	}
+	.points li .views_more a button{
+		padding: 6px 10px;
+		font-size: 15px;
+	}
+	.points li .views_detail .views_date{
+		font-size: 32px;
+		line-height: 32px;
+	}
+	.points li .views_text div{
+		padding: 0 25px 23px 0;
+	}	
+}
+@media only screen and (max-width: 700px){
+	.points li .views_text .views_date{
+		display: block;
+	}
+	.points li .views_text{
+		width: 100%;
+	}
+	.points li .views_text div{
+		border-right: 0px solid #E2231A;
+	}
+	.points li .views_detail{
+		display: none;
+	}
 }
