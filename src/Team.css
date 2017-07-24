@@ -12,6 +12,7 @@
 	height: 240px;
 	background-color: #ccc;
 	text-align: center;
+	overflow: hidden;
 }
 .team_list li.team_first{
 	height: 360px;
