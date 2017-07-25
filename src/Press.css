@@ -83,6 +83,8 @@
 	font-size: 16px;
 	line-height: 20px;
 }
+
+/*响应式布局*/
 @media only screen and (max-width: 1000px){
 	.press .news{
 		padding-top: 0;
@@ -120,4 +122,47 @@
 	.press li .news_detail{
 		display: none;
 	}
+}
+
+/* 移动端布局 */
+@media screen and (max-width: 414px){
+	.press h3{
+		padding: 0.57971rem 0;
+		font-size: 1.54589rem;
+		line-height: 1.70048rem;
+	}
+	.press .news{
+		padding-top: 1.54589rem;
+	}
+	.press .news>p{
+		font-size: 0.61836rem;
+		line-height: 1.00483rem;
+	}
+	.press .news li{
+		margin-bottom: 3.86473rem;
+	}
+	.press li .news_text div{
+		padding: 0 1.93237rem 0.88889rem 0;
+	}
+	.press li .news_text .views_title{
+		font-size: 0.92754rem;
+		line-height: 1.08213rem;
+	}
+	.press li .views_text .views_date{
+		font-size: 1.23671rem;
+		line-height: 1.23671rem;
+	}
+	.press li .news_text h4 a{
+		font-size: 0.92754rem;
+		line-height: 1.08213rem;
+	}
+	.press li .news_text h5{
+		margin-bottom: 1.15942rem;
+		font-size: 0.69565rem;	
+	}
+	.press li .news_text p{
+		font-size: 0.54106rem;
+		line-height: 0.77295rem;
+	}
+	/*.press li .news_detail display: none 未设置其里面的内容*/
 }

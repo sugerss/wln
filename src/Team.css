@@ -103,6 +103,8 @@
 	from {left:-600px;}
 	to { left:0;}
 }
+
+/*响应式布局*/
 @media screen and (max-width: 790px) {
 	.team_list li{
 		width: 28%;
@@ -114,6 +116,48 @@
 	}	
 }
 
+/* 移动端布局 */
+@media screen and (max-width: 414px){
+	.show_team{
+		padding: 1.93237rem 0 1.93237rem 0;
+	}
+	.team_list li{
+		height: 9.27536rem;
+	}
+	.team_list li.team_first{
+		height: 13.91304rem;
+	}
+	.team_list li h3{
+		font-size: 1.08213rem ;
+	    line-height: 1.15942rem ;
+	    top:3.86473rem;
+	    padding: 0.19324rem 0.38647rem 0.19324rem 0.38647rem ;
+	}
+	.team_list li h2{
+		font-size: 0.69565rem ;
+	    line-height: 0.85024rem;
+	    left: -23.18841rem; top:5.41063rem;
+	    padding: 0.19324rem 0px 0.19324rem 0px;
+	}
+	.team_list li h2:last-of-type{
+		top:6.57005rem;
+	}
+	.team_add{
+		bottom: 3.86473rem;
+		margin-left: -0.48309rem;
+		background-size: 0.96618rem 0.96618rem;
+		width:0.96618rem;
+		height:0.96618rem;
+	}
+	@keyframes h2_1{
+		from {left:-23.18841rem;}
+		to { left:0;}
+	}
+	@keyframes h2_2{
+		from {left:-23.18841rem;}
+		to { left:0;}
+	}	
+}
 
 
 

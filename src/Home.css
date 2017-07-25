@@ -13,7 +13,7 @@ header {
     vertical-align: middle;
 }
 .full p{
-	font-size: 90px;
+	font-size: 100px;
 	color: #fff;
 	transition: opacity .9s linear;
 	text-shadow: 2px 2px 8px rgba(0,0,0,0.1);
@@ -277,7 +277,7 @@ a.btn_black span{
 }
 .row_1 .slick_slide h4{
 	margin: 10px 0 10px 0;
-	ont-size: 20px;
+	font-size: 20px;
     line-height: 25px;
     font-weight: 400;
     color: #fff;
@@ -361,6 +361,163 @@ a.btn_black span{
     width: 90%;
     padding: 0 5% 0 5%;
     text-align: center;
+}
+
+/*移动端布局*/
+@media screen and (max-width: 414px){
+	header {
+		height:21.25604rem;
+		padding: 0 0.57971rem;
+	}
+	.full{
+		padding:0 0.57971rem;
+	    padding-top: 2.70531rem;
+	}
+	.full p{
+		font-size: 1.54589rem;
+		text-shadow: 0.07729rem 0.07729rem 0.30918rem rgba(0,0,0,0.1);
+	}
+	.focus{
+		height: 19.32367rem;
+	}
+	.silder{
+		height: 19.32367rem;
+	}	
+	.silder_mask{
+		height: 19.32367rem;
+	} 
+	.silder_inner{
+	    height: 19.32367rem;
+	}
+	.silder_inner h4{
+		font-size: 0.92754rem;
+		line-height: 1.375em;
+	}
+	.silder_inner h2{
+	    font-size: 1.31401rem;
+	    line-height: 1.4686rem;
+	}
+	.silder_inner h6{
+	    margin: 0.38647rem 0 1.15942rem 0;
+	    font-size: 0.92754rem;
+	}
+	a.btn_red{
+		border: 1px solid #E2231A;
+	    font-size: 0.61836rem;
+	}
+	a.btn_red span{
+		padding: 0.30918rem 0.77295rem 0.30918rem 0.77295rem;
+	    margin: 0.15459rem;
+	    font-size: 0.69565rem;
+	    line-height: 0.88889rem;
+	}
+	a.btn_white{
+		border: 1px solid #fff;
+	    margin: 0.77295rem 0 0 0;
+	    font-size: 0.61836rem;
+	}
+	a.btn_white span{
+		padding: 0.30918rem 0.77295rem 0.30918rem 0.77295rem;
+	    margin: 0.15459rem;
+	    font-size: 0.69565rem;
+	    line-height: 0.88889rem;
+	}
+	a.btn_black{
+		border: 1px solid #000;
+	    margin: 0.77295rem 0 0 0;
+	    font-size: 0.61836rem;
+	}
+	a.btn_black span{
+		padding: 0.30918rem 0.77295rem 0.30918rem 0.77295rem;
+	    margin: 0.15459rem;
+	    font-size: 0.69565rem;
+	    line-height: 0.88889rem;
+	}
+	.dots{
+		bottom: 0.38647rem;
+	}
+	.dot{
+		width:0.38647rem;
+		height: 0.38647rem;
+		background-position:0px 5.7971rem;
+	}
+	.services{
+		height: 19.32367rem;
+	}
+	.services_wrap{
+		left: -7.72947rem;
+	    width: 19.32367rem;
+	}
+	.services_text_title,.services_text_title p{
+	    font-size: 0.92754rem;
+	    padding: 0px 0 1.93237rem 0;
+	}
+	.services_text_text,.services_text_text p{
+	    font-size: 3.6715rem;
+	    line-height: 3.47826rem;
+	}
+	.column{
+		height: 19.32367rem;
+	}
+	.row{
+		height: 9.66184rem;
+	    min-height: 1px;
+	}
+	.row_1 .row_pad{
+	    padding:0 0.57971rem;
+	    margin: 0 0.657rem 0 0.46377rem;
+	    right:-19.32367rem;
+	}
+	.row_1 .slick_slide{
+		width: 11.98068rem;
+	}
+	.row_1 .slick_slide h3{
+		font-size: 0.657rem;
+	    line-height: 1.304347826086957em;
+	}
+	.row_1 .slick_slide h3 a{
+		font-size: 0.85024rem;
+	    line-height: 0.96618rem;
+	    margin: 2.51208rem 0 0px 0;
+	}
+	.row_1 .slick_slide h4{
+		margin: 0.38647rem 0 0.38647rem 0;
+		font-size: 0.77295rem;
+	    line-height: 0.96618rem;
+	}
+
+	.row_padding{
+	    padding:0 0.57971rem;
+	    right:-19.32367rem;
+	}
+	.row_introduce{
+		margin: 0 0.657rem 0 0.46377rem;
+	}
+	.row_icon p{
+	    font-size: 0.61836rem;
+	    line-height: 1.00483rem;
+	    margin: 0.92754rem auto 0.77295rem auto;
+	}
+	.row_2 .slick_slide h2{
+		font-size: 1.08213rem;
+	    line-height: 1.23671rem;
+	}
+	.row_2 .slick_slide h2 a{
+		padding: 0 0 0.38647rem 0;
+	}
+	.row_2 .slick_slide h4{
+		font-size: 0.69565rem;
+	    line-height: 0.85024rem;
+	}
+	.life_go,.past{
+		height: 19.32367rem;
+	}
+	.past_word{
+		padding-left: 0.57971rem;
+	}
+	.life_go{
+		padding-right: 0.57971rem;
+	}
 }
 
 

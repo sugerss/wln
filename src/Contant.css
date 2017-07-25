@@ -80,12 +80,56 @@
 	height: 700px;
 	position:static;
 }
+
+/*响应式布局*/
 @media screen and (max-width: 768px){
 	.add_list,#allmap{
 		width: 100%;
 	}
 }
 @media screen and (max-width: 700px) {
+	#allmap{
+		width: 90%;
+		margin: 0 5%;
+	}	
+}
+
+/*移动端布局*/
+@media screen and (max-width: 414px){
+	.add_bar{
+		border-top: 1px solid #E2231A;
+		margin-right: -0.57971rem;
+	}
+	.add_bar:last-of-type{
+		border-bottom: 1px solid #E2231A;
+	}
+	.add_button{
+	    padding: 0.38647rem 0 0.57971rem 0.57971rem;    
+	    font-size: 0.92754rem;
+	    line-height: 1.15942rem;
+	}
+	.trigon{
+		margin-right:0.57971rem;
+		margin-top: 0.38647rem;
+		border:0.38647rem solid transparent;
+		border-radius: 0.15459rem;
+	}
+	.add_bar_more{
+		padding: 0.77295rem 0 0 0.38647rem;
+	}
+	.address p{
+		line-height: 1.00483rem;
+		font-size: 0.61836rem;
+		padding-bottom: 0.57971rem;
+	}
+	.map button{
+	    margin: 0.38647rem 0 0 0;
+	}
+	.map button span{
+	    font-size: 0.57971rem;
+	    line-height: 0.657rem;
+	    padding: 0.19324rem 0.57971rem !important;
+	}
 	#allmap{
 		width: 90%;
 		margin: 0 5%;

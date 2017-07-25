@@ -90,6 +90,8 @@
 	top: 15px;
 	left: 20px;
 }
+
+/*响应式布局*/
 @media screen and (max-width: 1020px){
 	.works ul li{
 		width: 50%;
@@ -99,6 +101,44 @@
 	.works ul li{
 		width: 100%;
 	}
+}
+
+/* 移动端布局 */
+@media screen and (max-width: 414px){
+	.works ul li{
+		height: 34.78261rem;
+	}
+	.works li .text:hover .year{
+		transform: translateY(0.46377rem);
+	}
+	.works li p{
+		top: 15.07246rem;
+		font-size: 0.81159rem;
+		line-height: 0.96618rem;
+		margin-top: 0.38647rem;
+		text-shadow: 0.07729rem 0.07729rem 0.30918rem rgba(0,0,0,0.5);
+	}
+	.works li h3{
+		top: 16.42512rem;
+		font-size: 1.54589rem;
+		line-height: 1.85507rem;
+		text-shadow: 0.07729rem 0.07729rem 0.30918rem rgba(0,0,0,0.5);
+	} 
+	.works li .year{
+		top: 18.39614rem;
+	}
+	.works li .video{
+		top: 19.16908rem; 
+	}
+	.works .video .circle{
+		width: 2.31884rem;
+		height: 2.31884rem;
+		border: 0.07729rem solid #fff;
+	}
+	.works .video .circle img{
+		top: 0.57971rem;
+		left: 0.77295rem;
+	}	
 }
 
 

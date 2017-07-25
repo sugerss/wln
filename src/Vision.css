@@ -160,6 +160,7 @@
     line-height: 25px;
 }
 
+/*响应式布局*/
 @media screen and (max-width: 768px){
 	.lions_box,.aifei_box{
 		width: 100%;
@@ -167,6 +168,102 @@
 	.history_box,.team_box{
 		width: 100%;
 	}
+}
+
+/* 移动端布局 */
+@media screen and (max-width: 414px){
+	.content_top{
+	    font-size: 0.92754rem;
+	    line-height: 1.08213rem;
+	}
+	.content_top_word{
+	    padding-left: 0.57971rem;
+	}
+	.top_word{
+	    height: 19.32367rem;
+	}
+	.top_word h2{ 
+	    margin-bottom: 0.77295rem;
+	    font-size: 1.54589rem;
+	    line-height: 1.85507rem;
+	}
+	.vision_box h1{
+		font-size: 1.54589rem;
+	    line-height: 1.93237rem;
+	    margin: 0 0 0.92754rem 0;
+	}
+	.vision_box p{
+		font-size: 0.61836rem;
+	    line-height: 1.00483rem;
+	}
+	.vision_box h2{
+		font-size: 0.92754rem;
+	    line-height: 1.08213rem;
+	}
+	.user_culture_inner,.user_vision_inner{
+		padding: 0.77295rem 0.57971rem;
+	}
+	.user_vision_word{
+		padding: 1.54589rem 0.57971rem;
+	}
+	.user_culture{
+		margin-bottom: 1.93237rem;
+	}
+	.user_culture_word{
+		padding: 1.54589rem 0.57971rem;
+	}
+	.lions_aifei{
+		height: 15.61353rem;
+		margin-bottom: 3.86473rem;
+	}
+	.lions_con,.aifei_con{
+		height: 11.5942rem;
+		margin-bottom: -1.15942rem;
+	}
+	.lions_padding{
+		padding: 0 0.57971rem 0 20%;
+	}
+	.aifei_padding{
+		padding: 0 20% 0 0.57971rem;
+	}
+	.lions_con img,.aifei_con img{
+		width:11.5942rem;
+		height:11.5942rem;
+	}	
+	.lions_word,.aifei_word{
+		height: 3.24638rem;
+	}
+	.lions_aifei h2,.lions_aifei p{
+		font-size: 0.92754rem;
+	    line-height: 1.08213rem;
+	}
+	.history_box,.team_box{
+		height:19.32367rem;
+	}
+	.history_center,.team_center{
+	    min-height: 19.32367rem;
+	    height: 19.32367rem;
+	}
+	.history_china,.team_china{
+		font-size: 1.3913rem;
+	    line-height: 1.70048rem;
+	    margin-bottom: 0.57971rem;
+	}
+	.team_china{
+	    margin-bottom: 0.77295rem;
+	}
+	.user_history{
+		padding-bottom: 1.35266rem;
+	}
+	.user_history a{
+		border: 1px solid #E2231A;
+	}
+	.user_history a button{
+		margin: 0.15459rem;
+	    padding: 0.38647rem 0.96618rem;
+	    font-size: 0.81159rem;
+	    line-height: 0.96618rem;
+	}	
 }
 
 

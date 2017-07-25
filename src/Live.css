@@ -84,12 +84,44 @@
 	width:50%;
 }
 
+/*响应式布局*/
 @media screen and (max-width: 768px) {
 	.live_box,.live_life .ant-carousel,.live_banner_second .ant-carousel,.live_banner_third .ant-carousel{
 		width: 100%;
 	}
 	.live_banner_second .banner_right{
 		display: none;
+	}
+}
+
+/* 移动端布局 */
+@media screen and (max-width: 414px){
+	.ant-carousel .slick-slide {
+	  height: 19.32367rem;
+	  line-height: 19.32367rem;
+	}
+	.ant-carousel .slick-prev,.ant-carousel .slick-next{
+		width:1.62319rem;
+		height:1.70048rem;
+		line-height: 1.70048rem;	
+		font-size: 0.96618rem;
+		margin-top: -0.85024rem;
+	}
+	.ant-carousel .slick-prev{
+		left: 0.57971rem;
+	}
+	.ant-carousel .slick-next{
+		right: 0.57971rem;
+	}
+	.live_inner{
+	    height: 19.32367rem;
+	    min-height: 19.32367rem;
+	}
+	.live_banner_second .ant-carousel {
+		height: 19.32367rem;
+	}
+	.live_banner_third .ant-carousel {
+		height: 19.32367rem;
 	}
 }
 

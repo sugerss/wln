@@ -109,6 +109,8 @@
 .timeline img{margin-top: 5px;}
 .timeline a{color: #E2231A;}
 .fisrt_top{ margin-top: 50px;}
+
+/*响应式布局*/
 @media screen and (max-width: 700px){
 	.time_first,.time_second{
 		text-align: center;
@@ -118,13 +120,11 @@
 	.timeline_left,.timeline_right{
 		text-align: center;
 	}
-	.timeline h2{
-		margin-left: -5px;
-	}
 	.time_first .time_circular{
 		left:-25px;
 	}
 	.timeline h2{
+		margin-left: -5px;
 		display: inline-block;
 		padding: 0 20px;
 		border: 1px solid #E2231A;
@@ -132,6 +132,104 @@
 		line-height: 38px;
 		background: #fff;
 	}
+} 
+
+/*移动端布局*/
+@media screen and (max-width: 414px){
+	.history_title{
+		padding: 0.54106rem 0;
+	}
+	.history_title h2{
+		height: 1.70048rem;
+		line-height: 1.70048rem;
+	    font-size: 1.54589rem;
+	    margin-bottom: 0.54106rem;
+	}
+	.history_title h3{
+		font-size: 0.92754rem;
+	    line-height: 1.08213rem;
+	}
+	.history_time_box{
+	    margin: 0.77295rem 0 1.35266rem;
+	}	
+	.time_border{
+	    border-right: 1px solid #d0d0d0;
+	}
+	.time_first{
+	    width: calc(50% - 0.7343rem);
+		border: 0px solid rgb(226, 35, 26);
+	    padding: 0 0 0.77295rem 0;
+	    margin: 0.77295rem 0;
+	}
+	.time_first,.time_second{
+		text-align: center;
+		width: 100%;
+		padding: 0 0.57971rem;
+	}
+	.time_circular{
+		width:0.46377rem;
+		height: 0.46377rem;
+		background-size: 0.46377rem 0.46377rem;	
+	}
+	.time_cir{
+		width:0.69565rem;
+		height: 0.69565rem;
+		left: -0.34783rem;
+		background-size: 0.69565rem 0.69565rem;	
+	}
+	.time_cir:last-of-type{
+		bottom: 0;
+	}
+	.timeline{
+		padding:0.57971rem 0.57971rem 0.57971rem 1.15942rem;
+		line-height: 0.92754rem;
+		font-size: 0.50242rem;
+	}
+	.timeline h2{
+	    font-size: 1.85507rem;
+	    line-height: 1.85507rem;
+	    margin: 0 0.27053rem;
+	}
+	.timeline h3{
+		font-size: 0.81159rem;
+	    line-height: 1.00483rem;
+	    margin: 0.54106rem 0;
+	}
+	.timeline_left,.timeline_right{
+		text-align: center;
+	}
+	.timeline h2{
+		margin-left: -0.19323rem;
+		display: inline-block;
+		padding: 0 0.77294rem;
+		border: 0.03864rem solid #E2231A;
+		font-size: 1.46859rem;
+		line-height: 1.46859rem;
+		background: #fff;
+	}
+	.time_first .time_circular{
+		top: 0.8579rem;
+		left:0.1rem;
+	}
+	.time_second{
+		margin-top: 0.657rem;
+	    margin-bottom: 0.77295rem;
+	}
+	.time_second .time_circular{
+		top:1.23671rem;
+		left:-0.96618rem;
+	}
+	.timeline .sixity{
+		font-size: 0.61836rem;
+		line-height: 0.92754rem;
+	}
+	.timeline img{
+		margin-top: 0.19324rem;
+	}
+	.fisrt_top{ 
+		margin-top: 1.93237rem;
+	}
+
 }
 
 
