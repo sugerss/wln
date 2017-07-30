@@ -1,6 +1,52 @@
+@import '~antd/dist/antd.css';
 header {
 	height:550px;
 	padding: 0 15px;
+}
+.row .ant-carousel{
+	height: 100%;
+}
+.row .slick-slider{
+	height: 100%;
+}
+.row .slick-list{
+	height: 80%;
+}
+.row .ant-carousel .slick-arrow{
+	top: 25px;
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	line-height: 20px;
+	margin-top: 0;
+}
+.row .ant-carousel .slick-arrow a{
+	color: #000;
+	font-weight: bold;
+}
+.row .ant-carousel .slick-arrow:hover{
+	background: transparent;
+}
+.row .ant-carousel .slick-arrow:hover a{
+	color: #000;
+}
+.row .ant-carousel .slick-prev{
+	left: -3.5px;
+}
+.row .ant-carousel .slick-next{
+	right: -3.5px;
+}
+.row .ant-carousel .slick-slide {
+	margin-top: 60px;
+	width: 100%;
+	text-align: center;
+	height: 100px;
+	line-height: 100px;
+	background: #364d79;
+	overflow: hidden;
+}
+.row .ant-carousel .slick-slide h3 {
+  color: #fff;
 }
 .full{
 	background: #000;
@@ -248,6 +294,7 @@ a.btn_black span{
 	background-color: rgb(195, 39, 47);
 }
 .row_1 .row_pad{
+	height: 100%;
 	box-sizing: border-box;
     padding:0 15px;
     margin: 0 17px 0 12px;
@@ -257,74 +304,29 @@ a.btn_black span{
     right:-500px;
     opacity: 0;
 }
-.row_1 .slick_slide{
-	width: 310px;
-}
-.row_1 .slick_slide h3{
-	font-size: 17px;
-    line-height: 1.304347826086957em;
-}
-.row_1 .slick_slide h3:hover a{
-	text-decoration: underline;
-}
-.row_1 .slick_slide h3 a{
-	font-size: 22px;
-    line-height: 25px;
-    margin: 65px 0 0px 0;
-    font-weight: 600;
-    color: #fff;
-    display: block;
-}
-.row_1 .slick_slide h4{
-	margin: 10px 0 10px 0;
-	font-size: 20px;
-    line-height: 25px;
-    font-weight: 400;
-    color: #fff;
-}
 
 .row_2{
 	background-color: #ed2024;
 }
+.row_2 .row_padding{
+	position: relative;
+}
+.row_2 .row_image{
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	margin-left: -23px;
+}
 .row_padding{
+	height: 100%;
 	box-sizing: border-box;
     padding:0 15px;
+    margin: 0 17px 0 12px;
     position: relative;
     overflow: hidden;
     transition:0.5s 0.3s ease-out;
     right:-500px;
     opacity: 0;
-}
-.row_introduce{
-	margin: 0 17px 0 12px;
-	position: relative;
-}
-.row_icon p{
-	color: #1a1a1a;
-    font-size: 16px;
-    line-height: 26px;
-    text-align: center;
-    margin: 24px auto 20px auto;
-}
-.slicklist{
-    top: 0;
-    zoom: 1;
-}
-.row_2 .slick_slide h2{
-	font-size: 28px;
-    line-height: 32px;
-}
-.row_2 .slick_slide h2 a{
-	color: #fff;
-	padding: 0 0 10px 0;
-    display: block;
-    font-weight: 400;
-}
-.row_2 .slick_slide h4{
-	font-size: 18px;
-	color: #fff;
-	font-weight: 400;
-    line-height: 22px;
 }
 
 .life_go .mask_bg{background-color:rgba(237, 34, 36, 0.54); }

@@ -2,9 +2,14 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import './Home.css';
 import gif from './img/downarrow4.gif';
+import $ from 'jquery';
+import { Carousel } from 'antd';
+import image from "./img/wxin.png"
+
 class Home extends Component {
   componentDidMount(){
-
+    $('.slick-prev').html('<a><</a>');
+    $('.slick-next').html('<a>></a>')
   }
   Service(){
     var service=document.querySelector('.service');
@@ -81,30 +86,25 @@ class Home extends Component {
           <div className='column right'>
             <div className='row row_1'>
               <div className='row_pad'>
-                <div className='slick_track'>
-                  <div className='slick_slide'>
-                    <h3><a></a></h3>
-                    <h4>cc</h4>
-                    <h4>cc</h4>
-                  </div>
-                </div>
+                <Carousel dots="false" arrows="true">
+                  <div><h3>1</h3></div>
+                  <div><h3>2</h3></div>
+                  <div><h3>3</h3></div>
+                  <div><h3>4</h3></div>
+                </Carousel>
               </div>
             </div>
             <div className='row row_2'>
               <div className='row_padding'>
-                <div className='row_inner'>
-                  <div className='row_icon'>
-                    <p></p>
-                  </div>
-                  <div className='row_introduce'>
-                    <div className='slicklist'>
-                      <div className='slick_slide'>
-                        <h2><a>cc</a></h2>
-                        <h4>cccc</h4>
-                      </div>
-                    </div>
-                  </div>
+                <div className="row_image">
+                  <img alt="" src={image} />
                 </div>
+                <Carousel dots="false" autoplay arrows="true">
+                  <div><h3>1</h3></div>
+                  <div><h3>2</h3></div>
+                  <div><h3>3</h3></div>
+                  <div><h3>4</h3></div>
+                </Carousel>
               </div>
             </div>
           </div>

@@ -1,1 +1,282 @@
 @import '~antd/dist/antd.css';
+.section_inner{
+	width: 1100px;
+	margin: 0 auto;
+}
+.works_con{
+	width: 25%;
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	background: #f1f1f2;
+}
+.works_con h4{
+	font-size: 21px;
+	line-height: 28px;
+	color: #808080;
+	padding: 0 40px 20px 40px;
+}
+.works_con h2{
+	font-size: 40px;
+	line-height: 40px;
+	color: #ED2224;
+	padding: 0 40px 0 40px;
+	margin: 0 0 5px;
+}
+.works_con p{
+	font-size: 21px;
+	line-height: 28px;
+	color: #808080;
+	padding: 20px 40px;
+}
+.ant-carousel{
+	float: left;
+	width: 75%;
+}
+.ant-carousel .slick-slide {
+  text-align: center;
+  height: 160px;
+  line-height: 160px;
+  background: #364d79;
+  overflow: hidden;
+}
+.ant-carousel .slick-slide h3 {
+  color: #fff;
+}
+.ant-carousel .slick-arrow{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-top: -30px;
+  text-align:center;
+}
+.ant-carousel .slick-arrow a{ 
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  margin-top: 25px;
+}
+.ant-carousel .slick-prev:hover,.ant-carousel .slick-next:hover{
+  background: #fff;
+}
+.ant-carousel .slick-prev:hover a,.ant-carousel .slick-next:hover a{
+  color: #000;
+}
+.ant-carousel .slick-prev::before,.ant-carousel .slick-next::before{
+  display: none;
+}
+.ant-carousel .slick-prev{
+  z-index: 99;
+  left: 15px;
+}
+.ant-carousel .slick-next{
+  right: 15px;
+
+}
+.ant-carousel .slick-prev a,.ant-carousel .slick-next a{
+    font-size: 44px;
+    color: #fff;
+}
+.works_article{
+	margin-top: 100px;
+}
+.works_text,.works_image{
+	width: 50%;
+}
+.works_text_inner{
+	padding: 0 5%;
+}
+.works_image_inner{
+	padding: 0 15px;
+	text-align: center;
+}
+.works_person{
+	margin: 100px 0 40px 0;
+	padding: 65px 0 40px 0;
+	background: #efefef;
+}
+.works_person_intro{
+	width: 33.33%;
+	text-align: right;
+}
+.works_person_intro_inner{
+	padding: 0 15px;
+}
+.works_person_intro h3{
+	font-size: 21px;
+	color: #808080;
+	margin-top: 20px;
+}
+.works_person_intro h4{
+	font-size: 16px;
+}
+.works_person_saying{
+	width: 66.667%;
+}
+.works_person_saying_inner{
+	padding: 24px 35px;	
+}
+.works_person_saying h4{
+	padding: 40px;
+	font-size: 16px;
+	line-height: 22px;
+	color: #666667;
+	background: #fff;
+}
+.works_pro ul li{
+	float: left;
+	width: 33.33%;
+	text-align: center;
+	color: #969696;
+}
+.works_pro ul li .li_inner{
+	padding: 0 15px;
+}
+.works_pro ul li h3{
+	font-size: 24px;
+}
+.works_pro ul li h4{
+	font-size: 24px;
+}
+.works_pro ul li h5{
+	font-size: 24px;
+	line-height: 28px;
+}
+
+/*响应式布局*/
+@media screen and (max-width: 1200px){
+	.section_inner{
+		width: 950px;
+	}
+}
+@media screen and (max-width: 1000px){
+	.section_inner{
+		width: 768px;
+	}
+}
+@media screen and (max-width: 768px){
+	.section_inner{
+		width: 600px;
+	}
+	.works_con,.ant-carousel{
+		width: 100%;
+	}
+	.works_text,.works_image{
+		width: 100%;
+	}
+	.works_person{
+		margin: 50px 0 0 0;
+		padding: 50px 15px 20px;
+	}
+	.works_person_intro{
+		width: 100%;
+		text-align: center;
+	}
+	.works_person_saying{
+		width: 100%;
+	}
+	.works_person_saying_inner{
+		padding: 14px 14px 14px 10px;	
+	}
+	.works_pro ul li{
+		width: 100%;
+	}
+}
+@media screen and (max-width: 600px){
+	.section_inner{
+		width: 420px;
+	}
+}
+@media screen and (max-width: 480px){
+	.section_inner{
+		width: 300px;
+	}
+}
+
+/*移动端布局*/
+@media screen and (max-width: 414px){
+	.section_inner{
+		width: 11.5942rem;
+	}
+	.works_con h4{
+		font-size: 0.81159rem;
+		line-height: 1.08213rem;
+		padding: 0 1.54589rem 0.77295rem 1.54589rem;
+	}
+	.works_con h2{
+		font-size: 1.54589rem;
+		line-height: 1.54589rem;
+		padding: 0 1.54589rem 0 1.54589rem;
+		margin: 0 0 0.19324rem;
+	}
+	.works_con p{
+		font-size: 0.81159rem;
+		line-height: 1.08213rem;
+		padding: 0.77295rem 1.54589rem;
+	}
+	.ant-carousel .slick-slide {
+	  height: 6.18357rem;
+	  line-height: 6.18357rem;
+	}
+	.ant-carousel .slick-arrow{
+	  width: 2.31884rem;
+	  height: 2.31884rem;
+	  margin-top: -1.15942rem;
+	}
+	.ant-carousel .slick-arrow a{ 
+	  width: 1.70048rem;
+	  height: 1.70048rem;
+	  margin-top: 0.96618rem;
+	}
+	.ant-carousel .slick-prev{
+	  left: 0.57971rem;
+	}
+	.ant-carousel .slick-next{
+	  right: 0.57971rem;
+	}
+	.ant-carousel .slick-prev a,.ant-carousel .slick-next a{
+	    font-size: 1.70048rem;
+	}
+	.works_article{
+		margin-top: 3.86473rem;
+	}
+	.works_image_inner{
+		padding: 0 0.57971rem;
+	}
+	.works_person{
+		margin: 1.93237rem 0 0 0;
+		padding: 1.93237rem 0.57971rem 0.77295rem;
+	}
+	.works_person_intro_inner{
+		padding: 0 0.57971rem;
+	}
+	.works_person_intro h3{
+		font-size: 0.81159rem;
+		margin-top: 0.77295rem;
+	}
+	.works_person_intro h4{
+		font-size: 0.61836rem;
+	}
+	.works_person_saying_inner{
+		padding: 0.54106rem 0.54106rem 0.54106rem 0.38647rem;	
+	}
+	.works_person_saying h4{
+		padding: 1.54589rem;
+		font-size: 0.61836rem;
+		line-height: 0.85024rem;
+	}
+	.works_pro ul li .li_inner{
+		padding: 0 0.57971rem;
+	}
+	.works_pro ul li h3{
+		font-size: 0.92754rem;
+	}
+	.works_pro ul li h4{
+		font-size: 0.92754rem;
+	}
+	.works_pro ul li h5{
+		font-size: 0.92754rem;
+		line-height: 1.08213rem;
+	}
+}
