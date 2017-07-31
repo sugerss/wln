@@ -7,12 +7,16 @@ import createHistory from 'history/createBrowserHistory';
 import './common.css';
 import Home from './Home';
 import Works from './Works';
+import WorksTwo from './WorksTwo';
 import Points from './Points';
+import PointsTwo from './PointsTwo';
 import Servies from './Servies';
+import ServiesTwo from './ServiesTwo';
 import Vision from './Vision';
 import History from './History';
 import Team from './Team';
 import Press from './Press';
+import PressTwo from './PressTwo';
 import Live from './Live';
 import Contant from './Contant';
 import './index.css';
@@ -213,12 +217,16 @@ class Better extends Component {
       </div>   
       <Route exact path="/" component={Home}/>
       <Route path="/works" component={Works}/>
+      <Route path="/worksTwo" component={WorksTwo}/>
       <Route path="/points" component={Points}/>
+      <Route path="/pointsTwo" component={PointsTwo}/>
       <Route path="/vision" component={Vision}/>
-      <Route path="/servies" component={Servies}/>    
+      <Route path="/servies" component={Servies}/> 
+      <Route path="/serviesTwo" component={ServiesTwo}/>   
       <Route path="/history" component={History}/>
       <Route path="/team" component={Team}/>
       <Route path="/press" component={Press}/>
+      <Route path="/pressTwo" component={PressTwo}/>
       <Route path="/live" component={Live}/>
       <Route path="/contant" component={Contant}/>
       <div className='footer_box'>

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Carousel } from 'antd';
 import './WorksTwo.css';
 import './common.css';
 
@@ -26,7 +27,7 @@ class WorksTwo extends Component {
      	<div className="works_article">
      		<div className="clear section_inner">
      			<div className="works_text left">
-     				<div className-"works_text_inner"></div>
+     				<div className="works_text_inner"></div>
      			</div>
      			<div className="works_image left"></div>
      		</div>

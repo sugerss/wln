@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router , HashRouter , Match , Route , Link ,IndexLink } from 'react-router-dom';
+import $ from 'jquery';
+import createHistory from 'history/createBrowserHistory';
 import './Servies.css';
 import './common.css';
 import brand from './img/services_brand-strategy.gif';
@@ -34,17 +38,19 @@ class Servies extends Component {
       <div className="servies">
         <ul className="clear">
           <li>
-            <div className="servies_img">
-              <div>
-                <img className="active_image" src={brand} />
-                <img src={ani_brand} />
-              </div>  
-            </div>
-            <div className="servies_title">
-              <h3>
-                <a>多撒多</a>
-              </h3>
-            </div>
+            <Link to='/serviesTwo'>
+              <div className="servies_img">
+                <div>
+                  <img className="active_image" src={brand} />
+                  <img src={ani_brand} />
+                </div>  
+              </div>
+              <div className="servies_title">
+                <h3>
+                  <a>多撒多</a>
+                </h3>
+              </div>
+            </Link>
           </li>
           <li>
             <div className="servies_img">

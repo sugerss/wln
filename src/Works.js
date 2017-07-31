@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router , HashRouter , Match , Route , Link ,IndexLink } from 'react-router-dom';
+import $ from 'jquery';
+import createHistory from 'history/createBrowserHistory';
 import './Works.css';
 import './common.css';
 import video from './img/video.png';
@@ -10,18 +14,20 @@ class Works extends Component {
       <div className="works">
       	<ul className="clear">
       		<li>
-      			<div className="text">
-      				<p>发发呆</p>
-      				<h3>范德萨</h3>
-      				<p className="year">2015</p>
-      				<div className="mask"></div>
-    					<div className="video">
-    						<div className="circle">
-    							<img className="video2" src={video2} />
-    							<img src={video} />
-    						</div>
-    					</div>
-      			</div>
+      			<Link to="/worksTwo">
+              <div className="text">
+                <p>发发呆</p>
+                <h3>范德萨</h3>
+                <p className="year">2015</p>
+                <div className="mask"></div>
+                <div className="video">
+                  <div className="circle">
+                    <img className="video2" src={video2} />
+                    <img src={video} />
+                  </div>
+                </div>
+              </div>
+            </Link>
       		</li>
       		<li>
       			<div className="text">

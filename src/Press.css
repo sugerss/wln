@@ -83,7 +83,7 @@
 	font-size: 16px;
 	line-height: 20px;
 }
-
+.press li .news_more a button a{color: #fff; text-decoration: none;}
 /*响应式布局*/
 @media only screen and (max-width: 1000px){
 	.press .news{
