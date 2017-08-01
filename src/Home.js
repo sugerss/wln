@@ -7,9 +7,24 @@ import { Carousel } from 'antd';
 import image from "./img/wxin.png"
 
 class Home extends Component {
+  constructor(){
+    super()
+    this.state={
+     arr:[]
+    }
+  }
   componentDidMount(){
+    var add='192.168.43.16';
     $('.slick-prev').html('<a><</a>');
-    $('.slick-next').html('<a>></a>')
+    $('.slick-next').html('<a>></a>');
+    $.ajax({
+    url:'http://'+add+':8005/home_text',
+    type:'get',
+    success:function(a){
+      console.log(a)
+      this.setState({arr:a});
+    }.bind(this)
+   })
   }
   Service(){
     var service=document.querySelector('.service');
@@ -45,8 +60,9 @@ class Home extends Component {
       <div className="Home" ref='home' onWheel={this.Service}>
         <header>
         	<div className='full'>
-        		<p>我们让</p>
-        		<p>品牌变得有意义</p>
+        		{this.state.arr.map(function(i){
+              return <p>{i.banner_text}</p>
+            })}
         		<img src={gif}/>
         	</div>{/*header_banner_text*/}
         </header>
