@@ -83,7 +83,7 @@ body{
 	border-color: #f1f1f2;
 	transition: top .3s ease-in-out;
 	top:100%;
-	z-index: 10;
+	z-index: 1000;
 }
 .nav li .nav_list p{
 	width:225px; 
@@ -170,9 +170,12 @@ body{
 	border-top: 1px solid #eaeaea;
 	display: none;
 }
-.sub_menu li{
+.sub_menu p{
 	margin: 0 0 0 20px;
 	border-bottom: 1px solid #eaeaea;
+}
+.sub_menu p:last-of-type{
+	border: none;
 }
 .header_inner{
 	width:120px;
@@ -194,7 +197,7 @@ body{
 	vertical-align: middle;
 }
 .select ul{
-	margin: 20px 5px 0 -25px;
+	margin: 13px  5px 0 -25px;
 	width:60px;
 	line-height: 24px;
 	color: #fff;
@@ -359,7 +362,7 @@ body{
 	.foot_box .about_our .sxin{margin: 20px 0px 20px 0px;}
 	.header{height: 90px;}
 	.Copyright_box{padding: 0 10px;}
-	.services,.column{display: block; float: none; width:100%;}
+	.services,.column{display: table; float: none; width:100%;}
 	.life_go, .past{display: block; float: none; width:100%;}
 	.row{width:100%;}
 	.foot_box .about_our p:first-of-type{padding: 0 30px 5px 0px;}
@@ -472,7 +475,7 @@ body{
 	.sub_menu{
 		border-top: 1px solid #eaeaea;
 	}
-	.sub_menu li{
+	.sub_menu p{
 		margin: 0 0 0 0.77295rem;
 		border-bottom: 1px solid #eaeaea;
 	}

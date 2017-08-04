@@ -1,4 +1,8 @@
 @import '~antd/dist/antd.css';
+.Live .ant-carousel img{
+	width: 100%;
+	height: 500px;
+}
 .live_life .ant-carousel {
 	float: left;
 	width: 66.7%;
@@ -16,6 +20,7 @@
 }
 .ant-carousel .slick-arrow a{
 	color: #fff;	
+	margin: 0;
 }
 .ant-carousel .slick-arrow:hover a{
 	color: #8a8a8a;
@@ -50,6 +55,7 @@
 .live_life{
 	width: 100%;
 	height: 1000px;
+    background-color: rgb(226, 35, 26);
 }
 .live_box{
 	width: 33.3%;
@@ -59,13 +65,23 @@
     text-align: center;
 }
 .live_inner{
-	display: table-cell;
-    vertical-align: middle;
+	padding: 30% 0;
     height: 500px;
-    background-color: rgb(226, 35, 26);
     min-height: 500px;
     transition: all 700ms ease;
     position: relative;
+    color: #fff;
+}
+.live_inner h2{
+	color: #fff;
+	font-size: 90px;
+	line-height: 110px;
+	font-weight: 600;
+	margin: 20px 0;
+}
+.live_inner p{
+	font-size: 24px;
+	line-height: 28px;
 }
 .live_banner_second,.live_banner_third{
 	width: 100%;
@@ -82,6 +98,10 @@
 }
 .banner_right{
 	width:50%;
+	position: relative;
+}
+.banner_right video{
+	width: 100%;
 }
 
 /*响应式布局*/
@@ -96,6 +116,9 @@
 
 /* 移动端布局 */
 @media screen and (max-width: 414px){
+	.Live .ant-carousel img{
+		height: 19.32367rem;
+	}
 	.ant-carousel .slick-slide {
 	  height: 19.32367rem;
 	  line-height: 19.32367rem;
@@ -116,6 +139,16 @@
 	.live_inner{
 	    height: 19.32367rem;
 	    min-height: 19.32367rem;
+	}
+	.live_inner h2{
+		font-size: 3.47826rem;
+		line-height: 4.25120rem;
+		font-weight: 600;
+		margin: 0.77294rem 0;
+	}
+	.live_inner p{
+		font-size: 0.92753rem;
+		line-height: 1.08282rem;
 	}
 	.live_banner_second .ant-carousel {
 		height: 19.32367rem;

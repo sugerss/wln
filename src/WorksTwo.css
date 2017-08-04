@@ -5,7 +5,8 @@
 }
 .works_con{
 	width: 25%;
-	height: 100%;
+	padding-top: 150px;
+	height: 500px; 
 	display: table-cell;
 	vertical-align: middle;
 	text-align: center;
@@ -30,7 +31,8 @@
 	color: #808080;
 	padding: 20px 40px;
 }
-.ant-carousel{
+.works_banner .ant-carousel{
+	height: 400px;
 	float: left;
 	width: 75%;
 }
@@ -44,7 +46,7 @@
 .ant-carousel .slick-slide h3 {
   color: #fff;
 }
-.ant-carousel .slick-arrow{
+.works_banner .ant-carousel .slick-arrow{
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -199,6 +201,10 @@
 	.section_inner{
 		width: 11.5942rem;
 	}
+	.works_con{
+		padding-top: 5.79710rem;
+		height: 19.32367rem; 
+	}
 	.works_con h4{
 		font-size: 0.81159rem;
 		line-height: 1.08213rem;
@@ -207,7 +213,7 @@
 	.works_con h2{
 		font-size: 1.54589rem;
 		line-height: 1.54589rem;
-		padding: 0 1.54589rem 0 1.54589rem;
+		padding: 10% 1.54589rem 0 1.54589rem;
 		margin: 0 0 0.19324rem;
 	}
 	.works_con p{
@@ -215,11 +221,14 @@
 		line-height: 1.08213rem;
 		padding: 0.77295rem 1.54589rem;
 	}
+	.works_banner .ant-carousel{
+		height: 15.45893rem; 
+	}
 	.ant-carousel .slick-slide {
 	  height: 6.18357rem;
 	  line-height: 6.18357rem;
 	}
-	.ant-carousel .slick-arrow{
+	.works_banner .ant-carousel .slick-arrow{
 	  width: 2.31884rem;
 	  height: 2.31884rem;
 	  margin-top: -1.15942rem;

@@ -46,6 +46,30 @@ class Better extends Component {
         this.setState({arr:opt});
       }.bind(this)
    })*/
+    /*$('.mobile_menu').click(function(){
+      var flag=true;
+      if(flag){
+        $('.mobile_menu').find($('.sub_menu')).slideDown();
+        flag=false;
+        $('.mobile_menu').find($('.sub_menu')).children().click(function(){
+          flag=true;
+          return false;
+        })
+      }else{
+        $('.mobile_menu').find($('.sub_menu')).slideUp();
+        flag=true;
+      }
+
+    })*/
+    $('.mobile_menu_button').click(function(){
+      $('.header').css('height','100%');
+      if($(this).next().css('display')=='none'){
+        $(this).next().slideDown(200).css('display','block');          
+      }else{
+        $(this).next().slideUp(200);
+      }
+
+    })
   }
   change(e){
     var header=document.querySelector('#header');
@@ -124,16 +148,6 @@ class Better extends Component {
       document.body.scrollTop=document.documentElement.scrollTop=Scroll;
     },10);
   }
-  show(){
-    var header=document.querySelector('.header');
-    var nav_phone=document.querySelector('.nav_phone');  
-    if(nav_phone.style.display=='block'){
-      nav_phone.style.display='none';
-    }else{
-      header.style.height='100%';
-      nav_phone.style.display='block';
-    }
-  }
   render(){
     return (<Router>
     <div className='Container' onWheel={this.onscroll} onLoad={this.change}>
@@ -166,7 +180,7 @@ class Better extends Component {
         </li>
         <li><Link to="/contant">联系我们</Link></li>
       </ul>
-      <div className='mobile_menu_button' onClick={this.show}><span></span></div>
+      <div className='mobile_menu_button'><span></span></div>
       <div className='nav_phone'>
         <ul className='phone_list'>
           <li className='mobile_menu'><Link to="/">
@@ -174,28 +188,30 @@ class Better extends Component {
           </li>
           <li className='mobile_menu'><a>
             <span className='menu_word'>作品</span>
-            <ul className='sub_menu'>
-              <li><Link to="/works">作品</Link></li>
-              <li><Link to="/points">奥美观点</Link></li>
-            </ul>
+            <div className='sub_menu'>
+              <p><Link to="/works">作品</Link></p>
+              <p><Link to="/points">奥美观点</Link></p>
+            </div>
             <span className='mobile_arrow'>&gt;</span></a>
           </li>
-          <li className='mobile_menu'><Link to="/servies"><span className='menu_word'>我们的服务</span></Link></li>
+          <li className='mobile_menu'>
+          <Link to="/servies"><span className='menu_word'>我们的服务</span>
+          </Link></li>
           <li className='mobile_menu'><a>
             <span className='menu_word'>关于奥美</span>
-            <ul className='sub_menu'>
-              <li><Link to="/vision">奥美愿景</Link></li>
-              <li><Link to="/history">奥美中国历史</Link></li>
-              <li><Link to="/team">我们的领导团队</Link></li>
-            </ul>
+            <div className='sub_menu'>
+              <p><Link to="/vision">奥美愿景</Link></p>
+              <p><Link to="/history">奥美中国历史</Link></p>
+              <p><Link to="/team">我们的领导团队</Link></p>
+            </div>
             <span className='mobile_arrow'>&gt;</span></a>
           </li>
           <li className='mobile_menu'><a>
             <span className='menu_word'>奥美新闻</span>
-            <ul className='sub_menu'>
-              <li><Link to="/press">新闻稿</Link></li>
-              <li><Link to="/live">奥美生活</Link></li>
-            </ul>
+            <div className='sub_menu'>
+              <p><Link to="/press">新闻稿</Link></p>
+              <p><Link to="/live">奥美生活</Link></p>
+            </div>
             <span className='mobile_arrow'>&gt;</span></a>
           </li>
           <li className='mobile_menu'><Link to="/contant"><span className='menu_word'>联系我们</span></Link></li>

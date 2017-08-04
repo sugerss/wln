@@ -50,7 +50,7 @@
 .points li .views_detail{
 	width: 30%;
 }
-.points li .views_detail div{
+.points li .views_detail>div{
 	padding-left: 50px;
 }
 .points li .views_date{

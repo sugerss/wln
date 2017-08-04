@@ -1,22 +1,29 @@
 .content_top{
+	position: relative;
     font-size: 24px;
     line-height: 28px;
 }
 .content_top_word{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 50%;
 	box-sizing: border-box;
     padding-left: 15px;
     display: table;
     vertical-align: middle;
     text-align: center;
-    width: 100%;
 }
 .top_word{
+	padding: 0 15% 0 15px;
 	display: table-cell;
 	color: #fff;
 	vertical-align: middle;
     height: 500px;
+    text-align: left;
 }
 .top_word h2{
+	color: #fff;
 	font-weight: normal;    
     margin-bottom: 20px;
     font-size: 40px;
@@ -73,11 +80,11 @@
 	height: 404px;
 	margin-bottom: 100px;
 }
-.lions_box,.aifei_box{
+.lions_box{
 	width:50%;
 	box-sizing:border-box;
 }
-.lions_con,.aifei_con{
+.lions_con{
 	height: 300px;
 	text-align: center;
 	margin-bottom: -30px;
@@ -85,15 +92,15 @@
 .lions_padding{
 	padding: 0 15px 0 20%;
 }
-.aifei_padding{
+.lions_padding:last-of-type{
 	padding: 0 20% 0 15px;
 }
-.lions_con img,.aifei_con img{
+.lions_con img{
 	width:300px;
 	height:300px;
 	text-align: center;
 }	
-.lions_word,.aifei_word{
+.lions_word{
 	height: 84px;
 	width: 100%;
 	text-align:center;
@@ -109,40 +116,57 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-.history_box,.team_box{
+.history_box{
 	width:50%;
 	height:500px;
 	display: table;
 }
 .history_box{
-	background-image: url(img/ogilvy_culture_history-in-china-1-3.jpg);
+	background: url(img/ogilvy_culture_history-in-china-1-3.jpg);
 	background-position: center center;
+	position: relative;
 }
-.history_center,.team_center{
-	padding: 2% 20%;
+.history_mask{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	transition: all 700ms ease;
+}
+.history_box:hover .history_mask{
+	background: rgba(149, 149, 149, 0.478431);
+}
+.history_center{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20%;
     min-height: 500px;
     transition: all 700ms ease;
     display: table-cell;
     vertical-align: middle;
     height: 500px;
     text-align: center;
+    z-index: 10;
 }
-.history_china,.team_china{
+.history_china{
 	font-size: 36px;
     line-height: 44px;
     font-weight: normal;
     color: #ffffff;
     margin-bottom: 15px;
 }
-.team_center{
-	background-color: rgba(0, 0, 0, 0.05);
+.history_box:last-of-type{
+	background: rgba(0, 0, 0, 0.05);
 }
-.team_china{
+.history_box:last-of-type .history_china{
 	color: #e2231a;
     margin-bottom: 20px;
 }
 .user_history{
-	padding-bottom: 35px;
+	padding-bottom: 35px;	
 }
 .user_history a{
 	color:#fff; 
@@ -150,7 +174,11 @@
 	max-width: 100%;
 	border: 1px solid #E2231A;
 }
+.user_history a:hover{
+	border-color: #fff;
+}
 .user_history a button{
+	cursor: pointer;
 	background-color: #E2231A;
 	margin: 4px;
     padding: 10px 25px;
@@ -158,6 +186,10 @@
     color: #fff;
     font-size: 21px;
     line-height: 25px;
+}
+.user_history a:hover button{
+	background-color: #fff;
+    color: #E2231A;
 }
 
 /*响应式布局*/
@@ -181,6 +213,7 @@
 	}
 	.top_word{
 	    height: 19.32367rem;
+		padding: 0 15% 0 15px;
 	}
 	.top_word h2{ 
 	    margin-bottom: 0.77295rem;
@@ -216,40 +249,40 @@
 		height: 15.61353rem;
 		margin-bottom: 3.86473rem;
 	}
-	.lions_con,.aifei_con{
+	.lions_con{
 		height: 11.5942rem;
 		margin-bottom: -1.15942rem;
 	}
 	.lions_padding{
 		padding: 0 0.57971rem 0 20%;
 	}
-	.aifei_padding{
+	.lions_padding:last-of-type{
 		padding: 0 20% 0 0.57971rem;
 	}
-	.lions_con img,.aifei_con img{
+	.lions_con img{
 		width:11.5942rem;
 		height:11.5942rem;
 	}	
-	.lions_word,.aifei_word{
+	.lions_word{
 		height: 3.24638rem;
 	}
 	.lions_aifei h2,.lions_aifei p{
 		font-size: 0.92754rem;
 	    line-height: 1.08213rem;
 	}
-	.history_box,.team_box{
+	.history_box{
 		height:19.32367rem;
 	}
-	.history_center,.team_center{
+	.history_center{
 	    min-height: 19.32367rem;
 	    height: 19.32367rem;
 	}
-	.history_china,.team_china{
+	.history_china{
 		font-size: 1.3913rem;
 	    line-height: 1.70048rem;
 	    margin-bottom: 0.57971rem;
 	}
-	.team_china{
+	.history_china:last-of-type{
 	    margin-bottom: 0.77295rem;
 	}
 	.user_history{

@@ -1,20 +1,43 @@
 import React, { Component } from 'react';
 import './Vision.css';
+import $ from 'jquery';
 import ogilvy_cannes_lion from './img/ogilvy_cannes_lion.png';
 import ogilvy_effies_greaterchina from './img/ogilvy_effies_greaterchina-1.jpg';
+import conf from './Config';
+
 class Vision extends Component {
+  constructor(){
+    super()
+    this.state={
+      visions: []
+    }
+  }
+  componentDidMount(){
+    $.ajax({
+      url:  conf.url+conf.port+'/vision/vision',
+      type: 'GET',
+      success: function(e){
+        console.log(e);
+        this.setState({
+          visions:e
+        })
+      }.bind(this)
+    })
+  }
   render() {
     return (
       <div className="Vision">
-        <div className='content_top clear'>
-       		<div className='left'></div>
-       		<div className='right content_top_word'>
-    			<div className='top_word'>
-       				<h2></h2>
-       				<div></div>
-       			</div>
-       		</div>
-        </div>
+        {this.state.visions.map(function(e){
+          return <div className='content_top clear'>
+            <img src={e.vision_bg} />
+            <div className='content_top_word'>
+              <div className='top_word'>
+                <h2>“ {e.vision_title} ”</h2>
+                <div>{e.vision_text}</div>
+              </div>
+            </div>  
+          </div> 
+        })}
         <div className='vision_box'>
         	<div className='user_vision'>
 	        	<div className='wrap'>
@@ -54,44 +77,31 @@ class Vision extends Component {
 	        </div>
         </div>
         <div className='lions_aifei clear'>
-        	<div className='lions_box left'>
-        		<div className='lions_padding'>
-        			<div className='lions_con'>
-	        			<img src={ogilvy_cannes_lion}/>
-	        		</div>
-	        		<div className='lions_word'>
-	        			<h2>戛纳国际创意节<br/>年度代理商</h2>
-	        			<p>2012, 2013, 2014 and 2015</p>
-	        		</div>
-        		</div>
-        	</div>
-        	<div className='aifei_box left'>
-        		<div className='aifei_padding'>
-        			<div className='aifei_con'>
-        				<img src={ogilvy_effies_greaterchina}/>
-	        		</div>
-	        		<div className='aifei_word'>
-	        			<h2>艾菲实效广告奖<br/>年度代理商</h2>
-	        			<p>2012, 2013, 2014 and 2015</p>
-	        		</div>
-        		</div>
-        	</div>
+          {this.state.visions.map(function(e){
+            return <div className='lions_box left'>
+            <div className='lions_padding'>
+              <div className='lions_con'>
+                <img src={e.prize_img}/>
+              </div>
+              <div className='lions_word'>
+                <h2>{e.prize_name.split(' ')[0]}<br />{e.prize_name.split(' ')[1]}</h2>
+                <p>{e.prize_time}</p>
+              </div>
+            </div>
+          </div> 
+          })}
         </div>
         <div className='team_history_box clear'>
-        	<div className='history_box left'>
-        		<a></a>
-        		<div className='history_center'>
-        			<a><div className='history_china'>了解奥美中国二十多年的发展历程</div></a>
-        			<div className='user_history'><a><button>我们的历史</button></a></div>
-        		</div>
-        	</div>
-        	<div className='team_box left'>
-        		<a></a>
-        		<div className='team_center'>
-        			<a><div className='team_china'>了解奥美中国中西结合的管理团队</div></a>
-        			<div className='user_history'><a><button>我们的管理团队</button></a></div>
-        		</div>
-        	</div>
+          {this.state.visions.map(function(e){
+            return  <div className='history_box left'>
+              <a></a>
+              <div className="history_mask"></div>
+              <div className='history_center'>
+                <a><div className='history_china'>{e.vision_history_text}</div></a>
+                <div className='user_history'><a><button>{e.vision_btn}</button></a></div>
+              </div>
+            </div>
+          })}
         </div>
       </div>
     );

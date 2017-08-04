@@ -1,19 +1,88 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router , HashRouter , Match , Route , Link ,IndexLink } from 'react-router-dom';
 import './Home.css';
 import gif from './img/downarrow4.gif';
 import $ from 'jquery';
 import { Carousel } from 'antd';
-import image from "./img/wxin.png"
+import image from "./img/wxin.png";
+import conf from './Config';
 
 class Home extends Component {
+  constructor(){
+  	super()
+  	this.state={
+  		arr:[],
+      banner_video: [],
+      banner_gif: [],
+      services_bg: [],
+      china_bg: [],
+      sanya_img: [],
+      sanya_bg: [],
+      url:''
+  	}
+  }	
   componentDidMount(){
     $('.slick-prev').html('<a><</a>');
-    $('.slick-next').html('<a>></a>')
+    $('.slick-next').html('<a>></a>');
+    $.ajax({
+      url:conf.url+conf.port+'/home_text',
+      type:'get',
+      success:function(e){
+        console.log(e)
+        this.setState({arr:e});
+      }.bind(this)
+    })
+    $.ajax({
+      url:conf.url+conf.port+'/home_two',
+      type:'get',
+      success:function(e){
+        console.log(e)
+        this.setState({banner_video:e});
+      }.bind(this)
+    })
+    $.ajax({
+      url:conf.url+conf.port+'/home_three',
+      type:'get',
+      success:function(e){
+        console.log(e)
+        this.setState({banner_gif:e});
+      }.bind(this)
+    })
+    $.ajax({
+      url:conf.url+conf.port+'/home_four',
+      type:'get',
+      success:function(e){
+        console.log(e);
+      }.bind(this)
+    })
+    $.ajax({
+      url:conf.url+conf.port+'/home_five',
+      type:'get',
+      success:function(e){
+        console.log(e)
+        this.setState({china_bg:e});
+      }.bind(this)
+    })
+    $.ajax({
+      url:conf.url+conf.port+'/home_six',
+      type:'get',
+      success:function(e){
+        console.log(e)
+        this.setState({sanya_img:e});
+      }.bind(this)
+    })
+    $.ajax({
+      url:conf.url+conf.port+'/home_seven',
+      type:'get',
+      success:function(e){
+        console.log(e)
+        this.setState({sanya_bg:e});
+      }.bind(this)
+    })
   }
   Service(){
     var service=document.querySelector('.service');
-    var full=document.querySelector('.full');
     var ScrollTop=document.body.scrollTop||document.documentElement.scrollTop;
     var life=document.querySelector('.service');
     var services_wrap=document.querySelector('.services_wrap');
@@ -23,7 +92,7 @@ class Home extends Component {
     var life_word=document.querySelector('.life_word');
     if(ScrollTop>=service.offsetTop-166){
       services_wrap.style.opacity='1';
-      services_wrap.style.left='200px';   
+      services_wrap.style.right='0';   
       row_pad.style.opacity='1';
       row_pad.style.right='0';   
       row_padding.style.opacity='1';
@@ -35,23 +104,39 @@ class Home extends Component {
       life_word.style.opacity='1';
       life_word.style.right='0'; 
     }
-    if(ScrollTop>full.offsetTop){
-      full.style.transform="translateY("+ScrollTop-full.offsetTop+"px)";
-    }
 
   }
   render() {
     return (
       <div className="Home" ref='home' onWheel={this.Service}>
-        <header>
-        	<div className='full'>
-        		<p>我们让</p>
-        		<p>品牌变得有意义</p>
-        		<img src={gif}/>
-        	</div>{/*header_banner_text*/}
-        </header>
+        <div className="header_top">
+          {this.state.banner_video.map(function(e){
+            return e.banner_video.slice(-3)=='mp4'?(<video loop="loop" preload="auto"><source src={e.banner_video} type="video/mp4"></source></video>):<img src={e.banner_video} />
+          })}
+          <header>
+            <div className='full'>
+              {this.state.arr.map(function(i){
+                return (
+                  <div>
+                    <p>{i.banner_text.split(' ')[0]}</p>
+                    <p>{i.banner_text.split(' ')[1]}</p>
+                  </div>
+                )
+              })}
+              {this.state.banner_gif.map(function(e){
+                return <img src={e.banner_gif} />
+              })}
+            </div>{/*header_banner_text*/}
+          </header> 
+        </div>
         <div className='focus'>
-        	<div className='lb'>
+          <Carousel autoplay>
+            <div><h3>1</h3></div>
+            <div><h3>2</h3></div>
+            <div><h3>3</h3></div>
+            <div><h3>4</h3></div>
+          </Carousel>
+        	{/*<div className='lb'>
         		<div className='silder silder_one'>
               <a className='silder_location'></a>
               <div className='silder_mask'>
@@ -62,24 +147,26 @@ class Home extends Component {
                   <a className='btn_red'><span></span></a>
                 </div>
               </div>
-            </div>{/*poster_lunbo_img%text*/}
-        	</div>
-          <div className='dots'>
+            </div>
+        	</div>*/}{/*poster_lunbo_img%text*/}
+          {/*<div className='dots'>
             <a className='dot'>
               <div className='dot_img'></div>
             </a>
-          </div>{/*poster_lunbo_jiaodian*/}
+          </div>*/}{/*poster_lunbo_jiaodian*/}
         </div>
         <div className='service' id='service'>
-          <div className='services left'>
-            <a className='location'></a>          
+          <div className='services left'>        
             <div className='services_inner'>
             <div className='mask_bg'></div>
               <div className='services_wrap'>
-                <a className='location'></a>
-                <div className='services_text_title'></div>
-                <div className='services_text_text'></div>
-                <a className='btn_white'><span></span></a>
+                {this.state.arr.map(function(i){
+                  return <div className='services_text_title'>{i.services_title}</div>
+                })}
+                {this.state.arr.map(function(i){
+                  return <div className='services_text_text'>{i.services_text}</div>
+                })}
+                <a className='btn_white'><span><Link to='/servies' style={{color: '#000'}}>我们的服务</Link></span></a>
               </div>
             </div>
           </div>
@@ -113,16 +200,25 @@ class Home extends Component {
           <div className='left past'>
             <div className='mask_bg'></div>
             <div className='past_word'>
-              <h2></h2>
-              <h4></h4>
-              <a className='btn_black'><span></span></a>
+              {this.state.arr.map(function(i){
+                return <h2>{i.china_title}</h2>
+              })}
+              {this.state.arr.map(function(i){
+                return <h4>{i.china_text}</h4>
+              })}
+              <a className='btn_black'><span><Link to='/history' style={{color: '#fff'}}>看我们历史</Link></span></a>
             </div>
           </div>
           <div className='right life_go'>
             <div className='mask_bg'></div>
             <div className='life_word'>
-              <h3></h3>
-              <a className='btn_white'><span></span></a>
+              {this.state.arr.map(function(i){
+                return <h3>{i.sanya_title}</h3>
+              })}
+              {this.state.sanya_img.map(function(e){
+                return <img src={e.sanya_img} />
+              })}
+              <a className='btn_white'><span><Link to='/live' style={{color: '#000'}}>奥美生活</Link></span></a>
             </div>            
           </div>
         </div>

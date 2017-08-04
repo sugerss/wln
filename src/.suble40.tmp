@@ -60,7 +60,6 @@
 	bottom: 0;
 }
 .timeline{
-	width: 100%;
 	position: absolute;
 	padding:15px 15px 15px 30px;
 	line-height: 24px;
@@ -70,6 +69,9 @@
 	position: relative;
 }
 .timeline_left{text-align: right;}
+.timeline_left:nth-of-type(2n){
+	text-align: left;
+}
 .timeline_right{text-align: left;}
 .timeline h2{
 	color: #E2231A;
@@ -96,10 +98,8 @@
 	width: calc(50% - 19px);
 	border: 0px solid rgb(226, 35, 26);
     padding: 0 0 20px 0;
+    margin-bottom: 20px;
     position: relative;
-}
-.time_first .timeline video,.time_second .timeline video{
-	width: 350px; 
 }
 .time_second .time_circular{
 	top:32px;
@@ -109,11 +109,10 @@
 	font-size: 16px;
 	line-height: 24px;
 }
-.timeline img{margin-top: 3px;}
+.timeline img{margin-top: 5px;}
 .timeline a{color: #E2231A;}
 .fisrt_top{ margin-top: 50px;}
-.time_box div:nth-of-type(7) img{width:350px;}
-.time_box div:nth-of-type(7) .timeline{float:right;}
+
 /*响应式布局*/
 @media screen and (max-width: 700px){
 	.time_first,.time_second{
@@ -211,15 +210,13 @@
 		line-height: 1.46859rem;
 		background: #fff;
 	}
-	.time_first .timeline video,.time_second .timeline video{
-		width: 350px; 
-	}
 	.time_first .time_circular{
 		top: 0.8579rem;
 		left:0.1rem;
 	}
 	.time_second{
 		margin-top: 0.657rem;
+	    margin-bottom: 0.77295rem;
 	}
 	.time_second .time_circular{
 		top:1.23671rem;

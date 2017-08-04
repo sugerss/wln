@@ -7,18 +7,38 @@ import './Works.css';
 import './common.css';
 import video from './img/video.png';
 import video2 from './img/video2.png';
+import conf from './Config';
 
 class Works extends Component {
+  constructor(){
+    super()
+    this.state={
+      works: []
+    }
+  }
+  componentDidMount(){
+    $.ajax({
+      url:  conf.url+conf.port+'/work/text',
+      type: 'GET',
+      success: function(e){
+        console.log(e);
+        this.setState({
+          works:e
+        })
+      }.bind(this)
+    })
+  }
   render() {
     return (
       <div className="works">
       	<ul className="clear">
-      		<li>
-      			<Link to="/worksTwo">
+        {this.state.works.map(function(e){
+          return <li>
+            <Link to={`/worksTwo?id=${e.id}`}>
               <div className="text">
-                <p>发发呆</p>
-                <h3>范德萨</h3>
-                <p className="year">2015</p>
+                <p>{e.poster_company}</p>
+                <h3>{e.poster_name}</h3>
+                <p className="year">{e.year}</p>
                 <div className="mask"></div>
                 <div className="video">
                   <div className="circle">
@@ -28,35 +48,8 @@ class Works extends Component {
                 </div>
               </div>
             </Link>
-      		</li>
-      		<li>
-      			<div className="text">
-      				<p></p>
-      				<h3></h3>
-      				<p className="year"></p>
-      				<div className="mask"></div>
-    					<div className="video">
-    						<div className="circle">
-    							<img className="video2" src={video2} />
-    							<img src={video} />
-    						</div>
-    					</div>
-      			</div>
-      		</li>
-      		<li>
-      			<div className="text">
-      				<p></p>
-      				<h3></h3>
-      				<p className="year"></p>
-      				<div className="mask"></div>
-    					<div className="video">
-    						<div className="circle">
-    							<img className="video2" src={video2} />
-    							<img src={video} />
-    						</div>
-    					</div>
-      			</div>
-      		</li>
+          </li> 
+        })}
       	</ul>
       </div>
     );

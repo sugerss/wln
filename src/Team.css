@@ -10,18 +10,21 @@
 	float: left;
 	width: calc( 100% /3);
 	position: relative;
-	height: 240px;
-	background-color: #ccc;
-	text-align: center;
-	overflow: hidden;
-}
-.team_list li.team_first{
 	height: 360px;
+	background-color: #ccc;
 	color: #fff;
 	text-align: center;
+	overflow: hidden;
 	font-weight: 100;
 }
+.team_list li.team_first{
+	height: 450px;
+}
+.team_list li img{
+	width: 100%;
+}
 .team_list li h3{
+	color: #fff;
 	width:100%;
 	position: absolute;
 	font-size: 28px ;
@@ -32,6 +35,7 @@
     z-index: 2;
 }
 .team_list li h2{
+	color: #fff;
 	width:100%;
 	font-size: 18px ;
 	position: absolute;
@@ -122,10 +126,10 @@
 		padding: 1.93237rem 0 1.93237rem 0;
 	}
 	.team_list li{
-		height: 9.27536rem;
+		height: 13.91304rem;
 	}
 	.team_list li.team_first{
-		height: 13.91304rem;
+		height: 17.39130rem;
 	}
 	.team_list li h3{
 		font-size: 1.08213rem ;

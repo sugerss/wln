@@ -21,25 +21,59 @@ class Contant extends Component {
         }
         //让所有点在视野范围内
         map.setViewport(pointArray);
+        var add_bar=document.querySelectorAll('.add_bar');     
+        for(var i=0;i<add_bar.length;i++){
+            add_bar[i].index=i;
+            add_bar[i].onclick=function(){
+                    for(var j=0;j<add_bar.length;j++){
+                        add_bar[j].children[0].style.color='#B0B1B1';
+                        add_bar[j].children[0].children[0].children[0].style.cssText=`transform:rotate(0deg);borderTopColor:rgb(176, 177, 177);`;
+                        add_bar[j].style.backgroundColor='#fff';
+                        add_bar[j].children[1].style.cssText=`display:none;height:0;`;
+                    }
+                    add_bar[this.index].children[0].style.color='#fff';
+                    add_bar[this.index].children[0].children[0].children[0].style.cssText=`transform:rotate(-180deg);borderTopColor:rgb(255, 255, 255);`;
+                    add_bar[this.index].style.backgroundColor='#e2231a';
+                    add_bar[this.index].children[1].style.cssText=`display:block;height:247px;`;
+            }
+        }
     }
-    handclick(e){
-        var add_bar=document.querySelector('.add_bar');
-        var add_title=document.querySelector('.add_title');
-        var trigon=document.querySelector('.trigon');
-        //var add_bar_more=document.querySelector('.add_bar_more');
-        console.log(e)
-        trigon.style.transform='rotate(-180deg)';
-        trigon.style.borderTopColor='#fff';
-        add_title.style.color='#fff';
-        add_bar.style.backgroundColor='#E2231A';
-        add_bar.children[1].style.display='block';
-        add_bar.children[1].style.height='247px';
+    handclick(num){
+        if(num==1){
+            var add_bar=document.querySelectorAll('.add_bar')[0];                       
+        }else if(num==2){
+            var add_bar=document.querySelectorAll('.add_bar')[1];
+        }else if(num==3){
+            var add_bar=document.querySelectorAll('.add_bar')[2];
+        }else if(num==4){
+            var add_bar=document.querySelectorAll('.add_bar')[3];
+        }else if(num==5){
+            var add_bar=document.querySelectorAll('.add_bar')[4];
+        }  
+        var add_title=add_bar.querySelector('.add_title');
+        var trigon=add_bar.querySelector('.trigon');      
+        if(getComputedStyle(trigon)['borderTopColor']=='rgb(176, 177, 177)'){ 
+            trigon.style.transform='rotate(-180deg)';
+            trigon.style.borderTopColor='#fff';
+            add_title.style.color='#fff';
+            add_bar.style.backgroundColor='#E2231A';
+            add_bar.children[1].style.display='block';
+            add_bar.children[1].style.height='247px';            
+        }else{
+            trigon.style.transform='rotate(0deg)';
+            trigon.style.borderTopColor='rgb(176, 177, 177)';
+            add_title.style.color='#B0B1B1';
+            add_bar.style.backgroundColor='#fff';
+            add_bar.children[1].style.display='none';
+            add_bar.children[1].style.height='0';
+        }
+        
     }
     render() {
     return (
       <div className="Contant clear">
         <div className='add_list left'>
-        	<div className='add_bar' onClick={this.handclick}>
+        	<div className='add_bar' ref='one' onClick={this.handclick.bind(this,1)}>
         		<div className='add_title clear'>
         			<span className='add_button'>北京
         				<span className='trigon right'></span>
@@ -55,7 +89,7 @@ class Contant extends Component {
         			</div>
         		</div>
         	</div>
-        	<div className='add_bar'>
+        	<div className='add_bar' onClick={this.handclick.bind(this,2)}>
         		<div className='add_title clear'>
         			<span className='add_button'>上海
         				<span className='trigon right'></span>
@@ -72,7 +106,7 @@ Jing’an District, Shanghai, China</p>
         			</div>
         		</div>
         	</div>
-        	<div className='add_bar'>
+        	<div className='add_bar' onClick={this.handclick.bind(this,3)}>
         		<div className='add_title clear'>
         			<span className='add_button'>广州
         				<span className='trigon right'></span>
@@ -89,7 +123,7 @@ Haizhu District, Guangzhou, China</p>
         			</div>
         		</div>
         	</div>
-        	<div className='add_bar'>
+        	<div className='add_bar' onClick={this.handclick.bind(this,4)}>
         		<div className='add_title clear'>
         			<span className='add_button'>南京
         				<span className='trigon right'></span>
@@ -106,7 +140,7 @@ Gulou District, Nanjing</p>
         			</div>
         		</div>
         	</div>
-        	<div className='add_bar'>
+        	<div className='add_bar' onClick={this.handclick.bind(this,5)}>
         		<div className='add_title clear'>
         			<span className='add_button'>厦门
         				<span className='trigon right'></span>
