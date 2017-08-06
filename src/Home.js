@@ -15,6 +15,7 @@ import img3 from './img/Dove2.jpg';
 
 class Home extends Component {
   constructor(){
+
   	super()
   	this.state={
   		arr:[],
@@ -28,10 +29,19 @@ class Home extends Component {
       url:''
   	}
   }	
+
+    super()
+    this.state={
+     arr:[]
+    }
+  }
+
   componentDidMount(){
+    var add='192.168.43.16';
     $('.slick-prev').html('<a><</a>');
     $('.slick-next').html('<a>></a>');
     $.ajax({
+
       url:conf.url+conf.port+'/home_text',
       type:'get',
       success:function(e){
@@ -95,6 +105,15 @@ class Home extends Component {
       }.bind(this)
     })
     $('video').attr('autoplay','autoplay');
+
+    url:'http://'+add+':8005/home_text',
+    type:'get',
+    success:function(a){
+      console.log(a)
+      this.setState({arr:a});
+    }.bind(this)
+   })
+
   }
   Service(){
     var service=document.querySelector('.service');
@@ -124,6 +143,7 @@ class Home extends Component {
   render() {
     return (
       <div className="Home" ref='home' onWheel={this.Service}>
+
         <div className="header_top">
           <video loop="loop" autoplay="autoplay" src={video}></video>
           {/*{this.state.banner_video.map(function(e){
@@ -145,6 +165,16 @@ class Home extends Component {
             </div>{/*header_banner_text*/}
           </header> 
         </div>
+
+        <header>
+        	<div className='full'>
+        		{this.state.arr.map(function(i){
+              return <p>{i.banner_text}</p>
+            })}
+        		<img src={gif}/>
+        	</div>{/*header_banner_text*/}
+        </header>
+
         <div className='focus'>
           <Carousel autoplay>
             <div><h3><img src={img2} /></h3></div>
