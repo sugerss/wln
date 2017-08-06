@@ -114,14 +114,19 @@ header {
 	to{transform:scale(1);}
 }
 .focus{
-	height: 500px;
+	height: 420px;
 	width:100%;
 	background-color: #ccc;
 	position: relative;
 }
-.focus .lb{
-	
+.focus .ant-carousel .slick-slide{
+	height: 420px;
+	line-height: 420px;
 }
+.focus .ant-carousel .slick-slide img{
+	width: 100%;
+}
+
 .silder{
 	width:100%;
 	height: 500px;
@@ -301,6 +306,10 @@ a.btn_black span{
     color: #fff;
     text-transform: uppercase;
 }
+.row .ant-carousel .slick-slide{
+	background:transparent;
+	height:auto;
+}
 .mask_bg{
 	position: absolute;
 	left:0; top:0;
@@ -328,6 +337,7 @@ a.btn_black span{
 }
 .row_1{
 	background-color: rgb(195, 39, 47);
+	color:#fff;
 }
 .row_1 .row_pad{
 	height: 100%;
@@ -340,7 +350,20 @@ a.btn_black span{
     right:-500px;
     opacity: 0;
 }
-
+.row_1 h2{
+	text-align:left;
+	color:#fff;
+	font-size:22px;
+	line-height: 25px;
+ 
+}
+.row_1 h4,.row_1 p{
+	text-align:left;
+	color:#fff;
+	font-size: 20px;
+    line-height: 25px;
+    margin: 10px 0;
+}
 .row_2{
 	background-color: #ed2024;
 }
@@ -352,6 +375,20 @@ a.btn_black span{
 	top: 20px;
 	left: 50%;
 	margin-left: -23px;
+}
+.row_2 h2{
+	text-align:left;
+	color:#fff;
+	font-size:22px;
+	line-height: 25px;
+ 
+}
+.row_2 p{
+	text-align:left;
+	color:#fff;
+	font-size: 20px;
+    line-height: 25px;
+    margin: 10px 0;
 }
 .row_padding{
 	height: 100%;

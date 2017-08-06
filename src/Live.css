@@ -1,18 +1,37 @@
 @import '~antd/dist/antd.css';
 .Live .ant-carousel img{
 	width: 100%;
-	height: 500px;
+	height: 100%;
 }
 .live_life .ant-carousel {
-	float: left;
+	float: right;
 	width: 66.7%;
+	height: 482px;
 }
-.ant-carousel .slick-slide {
-  text-align: center;
-  height: 500px;
-  line-height: 500px;
-  background: #364d79;
+.live_life .slick-slider,.live_banner_second .slick-slider,.live_banner_third .slick-slider,.live_banner_four .slick-slider{
+	height: 100%;
+}
+.live_life .slick-list,.live_banner_second .slick-list,.live_banner_third .slick-list,.live_banner_four .slick-list{
+	height: 100%;
+}
+.live_life .slick-track,.live_banner_second .slick-track,.live_banner_third .slick-track,.live_banner_four .slick-track{
+	height: 100%;
+}
+.live_life .ant-carousel .slick-slide,.live_banner_second .ant-carousel .slick-slide,.live_banner_third .ant-carousel .slick-slide,.live_banner_four .ant-carousel .slick-slide{
+  height: 100%;
   overflow: hidden;
+}
+.live_life h3,.live_banner_second h3,.live_banner_third h3,.live_banner_four h3{
+	height: 100%;
+}
+.live_banner_second .ant-carousel{
+	height: 362px;
+}
+.live_banner_third .ant-carousel{
+	height: 373px;
+}
+.live_banner_four .ant-carousel{
+	height: 388px;
 }
 .ant-carousel .slick-arrow:hover{
 	background-color: #fff;
@@ -54,7 +73,6 @@
 }
 .live_life{
 	width: 100%;
-	height: 1000px;
     background-color: rgb(226, 35, 26);
 }
 .live_box{
@@ -66,7 +84,6 @@
 }
 .live_inner{
 	padding: 30% 0;
-    height: 500px;
     min-height: 500px;
     transition: all 700ms ease;
     position: relative;
@@ -83,18 +100,16 @@
 	font-size: 24px;
 	line-height: 28px;
 }
-.live_banner_second,.live_banner_third{
+.live_banner_second,.live_banner_third,.live_banner_four{
 	width: 100%;
 }
-.live_banner_second .ant-carousel {
+.live_banner_second .ant-carousel ,.live_banner_four .ant-carousel{
 	float: left;
 	width: 50%;
-	height: 500px;
 }
 .live_banner_third .ant-carousel {
 	float: left;
 	width: calc( 100% /3);
-	height: 500px;
 }
 .banner_right{
 	width:50%;
@@ -106,10 +121,10 @@
 
 /*响应式布局*/
 @media screen and (max-width: 768px) {
-	.live_box,.live_life .ant-carousel,.live_banner_second .ant-carousel,.live_banner_third .ant-carousel{
+	.live_box,.live_life .ant-carousel,.live_banner_second .ant-carousel,.live_banner_third .ant-carousel,.live_banner_four .ant-carousel{
 		width: 100%;
 	}
-	.live_banner_second .banner_right{
+	.live_banner_four .banner_right{
 		display: none;
 	}
 }
@@ -149,12 +164,6 @@
 	.live_inner p{
 		font-size: 0.92753rem;
 		line-height: 1.08282rem;
-	}
-	.live_banner_second .ant-carousel {
-		height: 19.32367rem;
-	}
-	.live_banner_third .ant-carousel {
-		height: 19.32367rem;
 	}
 }
 

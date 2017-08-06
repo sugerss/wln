@@ -7,6 +7,11 @@ import $ from 'jquery';
 import { Carousel } from 'antd';
 import image from "./img/wxin.png";
 import conf from './Config';
+import video from './img/ogilvy-advertising-reel-home.mp4';
+import img1 from './img/VisitBritain-screenshot-2.jpg';
+import img2 from './img/agoda-KV-1600500.jpeg';
+import img3 from './img/Dove2.jpg';
+
 
 class Home extends Component {
   constructor(){
@@ -19,6 +24,7 @@ class Home extends Component {
       china_bg: [],
       sanya_img: [],
       sanya_bg: [],
+      homebanner:[],
       url:''
   	}
   }	
@@ -80,6 +86,15 @@ class Home extends Component {
         this.setState({sanya_bg:e});
       }.bind(this)
     })
+    $.ajax({
+      url:conf.url+conf.port+'/home_banner',
+      type:'get',
+      success:function(e){
+        console.log(e)
+        this.setState({homebanner:e});
+      }.bind(this)
+    })
+    $('video').attr('autoplay','autoplay');
   }
   Service(){
     var service=document.querySelector('.service');
@@ -110,9 +125,10 @@ class Home extends Component {
     return (
       <div className="Home" ref='home' onWheel={this.Service}>
         <div className="header_top">
-          {this.state.banner_video.map(function(e){
-            return e.banner_video.slice(-3)=='mp4'?(<video loop="loop" preload="auto"><source src={e.banner_video} type="video/mp4"></source></video>):<img src={e.banner_video} />
-          })}
+          <video loop="loop" autoplay="autoplay" src={video}></video>
+          {/*{this.state.banner_video.map(function(e){
+                      return e.banner_video.slice(-3)=='mp4'?(<video loop="loop" preload="auto"><source src={e.banner_video} type="video/mp4"></source></video>):<img src={e.banner_video} />
+                    })}*/}
           <header>
             <div className='full'>
               {this.state.arr.map(function(i){
@@ -131,10 +147,9 @@ class Home extends Component {
         </div>
         <div className='focus'>
           <Carousel autoplay>
-            <div><h3>1</h3></div>
-            <div><h3>2</h3></div>
-            <div><h3>3</h3></div>
-            <div><h3>4</h3></div>
+            <div><h3><img src={img2} /></h3></div>
+            <div><h3><img src={img1} /></h3></div>
+            <div><h3><img src={img3} /></h3></div>
           </Carousel>
         	{/*<div className='lb'>
         		<div className='silder silder_one'>
@@ -174,10 +189,14 @@ class Home extends Component {
             <div className='row row_1'>
               <div className='row_pad'>
                 <Carousel dots="false" arrows="true">
-                  <div><h3>1</h3></div>
-                  <div><h3>2</h3></div>
-                  <div><h3>3</h3></div>
-                  <div><h3>4</h3></div>
+                  {this.state.homebanner.map(function(e){
+                    return <div>
+                      <h2>{e.services_one_title}</h2>
+                      <h4>{e.services_one_text}</h4>
+                      <p>{e.services_one_time}</p>
+                    </div>
+                  })}
+                  <div style={{display: 'none'}}><h3>1</h3></div>
                 </Carousel>
               </div>
             </div>
@@ -187,10 +206,13 @@ class Home extends Component {
                   <img alt="" src={image} />
                 </div>
                 <Carousel dots="false" autoplay arrows="true">
-                  <div><h3>1</h3></div>
-                  <div><h3>2</h3></div>
-                  <div><h3>3</h3></div>
-                  <div><h3>4</h3></div>
+                  {this.state.homebanner.map(function(e){
+                    return <div>
+                      <h2>{e.services_two_title}</h2>
+                      <p>{e.services_two_time}</p>
+                    </div>
+                  })}
+                  <div style={{display: 'none'}}><h3>1</h3></div>
                 </Carousel>
               </div>
             </div>

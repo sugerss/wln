@@ -3,6 +3,7 @@ import './Live.css';
 import { Carousel } from 'antd';
 import $ from 'jquery';
 import conf from './Config';
+import poster from './img/GU3_9806.jpg'
 
 class Live extends Component {
   constructor(){
@@ -185,7 +186,7 @@ class Live extends Component {
 				<div style={{display: 'none'}}><h3>1</h3></div>
 			</Carousel>
         </div>
-        <div className='live_banner_second clear'>
+        <div className='live_banner_four clear'>
         	<Carousel dots="false" arrows="true">
         		{this.state.lifeeight.map(function(e){
         			return <div><h3><img src={e.life_pic_eight} /></h3></div>
@@ -197,7 +198,7 @@ class Live extends Component {
         		{this.state.lifevideo.map(function(e,i){
         			if(i==0){
         				return <div className='video'>
-        					<video src={e.video} preload="auto" controls></video>
+        					<video src={e.video} preload="auto" controls poster={poster}></video>
         				</div> 
         			}
         		})}
