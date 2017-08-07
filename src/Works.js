@@ -42,14 +42,15 @@ class Works extends Component {
                 <div className="mask"></div>
                 <div className="video">
                   <div className="circle">
-                    <img className="video2" src={video2} />
-                    <img src={video} />
+                    <img className="video2" src={video2} alt=""/>
+                    <img src={video} alt=""/>
                   </div>
                 </div>
               </div>
             </Link>
           </li> 
         })}
+    	{/*works li end*/}
       	</ul>
       </div>
     );

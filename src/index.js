@@ -153,33 +153,34 @@ class Better extends Component {
     <div className='Container' onWheel={this.onscroll} onLoad={this.change}>
       <div className="fixed" onClick={this.handleClick}></div>
       <div className='header clear' id='header'>
-        <a className='logo'><img src={logo_1}/><img src={logo_2}/></a>
+        <a className='logo'><img src={logo_1} alt=""/><img src={logo_2} alt=""/></a>
         <ul className='nav left'>      
-        <li><Link to="/">主页</Link></li>
-        <li>
-          <a href='javascript:;'>作品</a>
-          <div className='nav_list'>
-            <p><Link to="/works">作品</Link></p>
-            <p><Link to="/points">奥美观点</Link></p>
-          </div>
-        </li>
-        <li><Link to="/servies">我们的服务</Link></li>
-        <li><a href='javascript:;'>关于奥美</a>
-          <div className='nav_list'>
-            <p><Link to="/vision">奥美愿景</Link></p>
-            <p><Link to="/history">奥美中国历史</Link></p>
-            <p><Link to="/team">我们的领导团队</Link></p>
-          </div>
-        </li>
-        <li>
-          <a href='javascript:;'>奥美新闻</a>
-          <div className='nav_list'>
-            <p><Link to="/press">新闻稿</Link></p>
-            <p><Link to="/live">奥美生活</Link></p>
-          </div>
-        </li>
-        <li><Link to="/contant">联系我们</Link></li>
-      </ul>
+          <li><Link to="/">主页</Link></li>
+          <li>
+            <a href='javascript:;'>作品</a>
+            <div className='nav_list'>
+              <p><Link to="/works">作品</Link></p>
+              <p><Link to="/points">奥美观点</Link></p>
+            </div>
+          </li>
+          <li><Link to="/servies">我们的服务</Link></li>
+          <li><a href='javascript:;'>关于奥美</a>
+            <div className='nav_list'>
+              <p><Link to="/vision">奥美愿景</Link></p>
+              <p><Link to="/history">奥美中国历史</Link></p>
+              <p><Link to="/team">我们的领导团队</Link></p>
+            </div>
+          </li>
+          <li>
+            <a href='javascript:;'>奥美新闻</a>
+            <div className='nav_list'>
+              <p><Link to="/press">新闻稿</Link></p>
+              <p><Link to="/live">奥美生活</Link></p>
+            </div>
+          </li>
+          <li><Link to="/contant">联系我们</Link></li>
+        </ul>
+        {/*header pc end*/}
       <div className='mobile_menu_button'><span></span></div>
       <div className='nav_phone'>
         <ul className='phone_list'>
@@ -217,19 +218,7 @@ class Better extends Component {
           <li className='mobile_menu'><Link to="/contant"><span className='menu_word'>联系我们</span></Link></li>
         </ul>
       </div>
-      <div className='right header_inner'>
-        <a className='search left'><img src={searchOne}/></a>
-        <div className='select right'>
-          <ul>
-            <li>
-              <a href="#">CN</a>
-              <ul className='lang'>
-                <li><a>EN</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+      {/*header ipone end*/}
       </div>   
       <Route exact path="/" component={Home}/>
       <Route path="/works" component={Works}/>
@@ -245,6 +234,7 @@ class Better extends Component {
       <Route path="/pressTwo" component={PressTwo}/>
       <Route path="/live" component={Live}/>
       <Route path="/contant" component={Contant}/>
+      {/*路由组件*/}
       <div className='footer_box'>
         <div className='foot_box wrap clear'>
           <div className='left needlist'>
@@ -260,6 +250,7 @@ class Better extends Component {
             <img className="sxin" src={sxin} alt=""/>
           </div>
         </div>
+        {/*footer a end*/}
         <div className='Copyright_box clear'>
           <ul className='copy left'>
             <li><Link to="/">主页</Link></li>
@@ -269,6 +260,7 @@ class Better extends Component {
           </ul>
           <p className='right copyright'>© Copyright Ogilvy China 2016</p>
         </div>
+        {/*footer copyright end*/}
       </div>
     </div>
   </Router>);

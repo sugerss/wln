@@ -16,6 +16,7 @@
 	font-weight: 100;
     line-height: 28px;
 }
+/*history_title ending*/
 .history_time_box{
     margin: 20px 0 35px;
     position: relative;
@@ -28,9 +29,6 @@
     height: 100%;
     border-right: 1px solid #d0d0d0;
     border-right-color: #e2231a;
-}
-.time_box{
-	
 }
 .time_first{
     width: calc(50% - 19px);
@@ -114,6 +112,8 @@
 .fisrt_top{ margin-top: 50px;}
 .time_box div:nth-of-type(7) img{width:350px;}
 .time_box div:nth-of-type(7) .timeline{float:right;}
+/*history_time_box ending*/
+
 /*响应式布局*/
 @media screen and (max-width: 700px){
 	.time_first,.time_second{

@@ -141,55 +141,58 @@ class Live extends Component {
         	</div>
         	<Carousel dots="false" arrows="true" effect="fade">
         		{this.state.lifeone.map(function(e){
-        			return <div><h3><img src={e.life_pic_one} /></h3></div>
+        			return <div><h3><img src={e.life_pic_one} alt=""/></h3></div>
         		})} 
 				<div style={{display: 'none'}}><h3>1</h3></div>
 			</Carousel>
         	<Carousel dots="false" arrows="true">
         		{this.state.lifetwo.map(function(e){
-        			return <div><h3><img src={e.life_pic_two} /></h3></div>
+        			return <div><h3><img src={e.life_pic_two} alt=""/></h3></div>
         		})}
 				<div style={{display: 'none'}}><h3>1</h3></div>
 			</Carousel>
         </div>
+    	{/*live_life end*/}
         <div className='live_banner_second clear'>
         	<Carousel dots="false" arrows="true">
 				{this.state.lifethree.map(function(e){
-        			return <div><h3><img src={e.life_pic_three} /></h3></div>
+        			return <div><h3><img src={e.life_pic_three} alt=""/></h3></div>
         		})}
 				<div style={{display: 'none'}}><h3>1</h3></div>
 			</Carousel>
 			<Carousel dots="false" arrows="true">
 				{this.state.lifefour.map(function(e){
-        			return <div><h3><img src={e.life_pic_four} /></h3></div>
+        			return <div><h3><img src={e.life_pic_four} alt=""/></h3></div>
         		})}
 				<div style={{display: 'none'}}><h3>1</h3></div>
 			</Carousel>
         </div>
+    	{/*live_banner_second end*/}
         <div className='live_banner_third clear'>
 			<Carousel dots="false" arrows="true">
 				{this.state.lifefive.map(function(e){
-        			return <div><h3><img src={e.life_pic_five} /></h3></div>
+        			return <div><h3><img src={e.life_pic_five} alt=""/></h3></div>
         		})}
 				<div style={{display: 'none'}}><h3>1</h3></div>
 			</Carousel>
 			<Carousel dots="false" arrows="true">
 				{this.state.lifesix.map(function(e){
-        			return <div><h3><img src={e.life_pic_six} /></h3></div>
+        			return <div><h3><img src={e.life_pic_six} alt=""/></h3></div>
         		})}
 				<div style={{display: 'none'}}><h3>1</h3></div>
 			</Carousel>
 			<Carousel dots="false" arrows="true">
 				{this.state.lifeseven.map(function(e){
-        			return <div><h3><img src={e.life_pic_seven} /></h3></div>
+        			return <div><h3><img src={e.life_pic_seven} alt=""/></h3></div>
         		})}
 				<div style={{display: 'none'}}><h3>1</h3></div>
 			</Carousel>
         </div>
+    	{/*live_banner_third end*/}
         <div className='live_banner_four clear'>
         	<Carousel dots="false" arrows="true">
         		{this.state.lifeeight.map(function(e){
-        			return <div><h3><img src={e.life_pic_eight} /></h3></div>
+        			return <div><h3><img src={e.life_pic_eight} alt=""/></h3></div>
         		})}
 				<div style={{display: 'none'}}><h3>1</h3></div>
 			</Carousel>
@@ -204,6 +207,7 @@ class Live extends Component {
         		})}
         	</div>
         </div>
+    	{/*live_banner_four end*/}
       </div>
     );
   }

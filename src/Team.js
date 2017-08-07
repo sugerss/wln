@@ -31,7 +31,7 @@ class Team extends Component {
                 if(i<3){
                   return <li className="team_first">
                       <div className='team_mask'></div>
-                      <img src={e.img}/>
+                      <img src={e.img} alt=""/>
                       <h3>{e.name}</h3>
                       <h2>{e.job_one}</h2>
                       <h2>{e.job_two}</h2>
@@ -40,7 +40,7 @@ class Team extends Component {
                 }else{
                   return <li>
                       <div className='team_mask'></div>
-                      <img src={e.img}/>
+                      <img src={e.img} alt=""/>
                       <h3>{e.name}</h3>
                       <h2>{e.job_one}</h2>
                       <h2>{e.job_two}</h2>
@@ -48,6 +48,7 @@ class Team extends Component {
                   </li>
                 }
             })}
+            {/*team_list end*/}
         </ul>
       </div>
     );

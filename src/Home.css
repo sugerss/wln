@@ -2,6 +2,7 @@
 header {
 	height:550px;
 }
+/*整个页面的轮播设置 start*/
 .Home .ant-carousel .slick-slide {
   text-align: center;
   background: #364d79;
@@ -66,6 +67,7 @@ header {
 .row .ant-carousel .slick-slide h3 {
   color: #fff;
 }
+/*整个页面的轮播设置 end*/
 .header_top{
 	position: relative;
 	width: 100%;
@@ -113,6 +115,7 @@ header {
 	from{transform:scale(0);}
 	to{transform:scale(1);}
 }
+/*header_top end*/
 .focus{
 	height: 420px;
 	width:100%;
@@ -255,6 +258,7 @@ a.btn_black span{
 .dot_img{
 	position: absolute;
 }
+/*focus end*/
 .service{
 	position: relative;
 	background-color: #ccc;
@@ -306,6 +310,7 @@ a.btn_black span{
     color: #fff;
     text-transform: uppercase;
 }
+/*service services end*/
 .row .ant-carousel .slick-slide{
 	background:transparent;
 	height:auto;
@@ -401,6 +406,7 @@ a.btn_black span{
     right:-500px;
     opacity: 0;
 }
+/*service column end*/
 .life{
 	overflow: hidden;
 }
@@ -432,6 +438,7 @@ a.btn_black span{
 .past_word h4{
 	font-size: 20px;
 }
+/*life past end*/
 .life_go{
 	padding-right: 15px;
 }
@@ -455,6 +462,7 @@ a.btn_black span{
 	font-size: 38px;
 	color: #fff;
 }
+/*life life_go end*/
 
 /*移动端布局*/
 @media screen and (max-width: 414px){
@@ -534,6 +542,7 @@ a.btn_black span{
 		height: 0.38647rem;
 		background-position:0px 5.7971rem;
 	}
+	/*整个页面的轮播设置 end*/
 	.services{
 		height: 19.32367rem;
 		background-size: 100% 19.32367rem;
@@ -549,6 +558,7 @@ a.btn_black span{
 	    font-size: 2.31884rem;
 	    line-height: 3.47826rem;
 	}
+	/*service services end*/
 	.column{
 		height: 19.32367rem;
 	}
@@ -602,12 +612,14 @@ a.btn_black span{
 		font-size: 0.69565rem;
 	    line-height: 0.85024rem;
 	}
+	/*service column end*/
 	.life_go,.past{
 		height: 19.32367rem;
 	}
 	.past{
 		background-size: 100% 19.32367rem;
 	}
+	/*life past end*/
 	.life_go{
 		background-size: 100% 19.32367rem;
 	}
@@ -630,6 +642,7 @@ a.btn_black span{
 	.life_word h3{
 		font-size: 1.46859rem;
 	}
+	/*life life_go end*/
 }
 
 

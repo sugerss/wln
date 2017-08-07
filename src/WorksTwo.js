@@ -49,8 +49,8 @@ class WorksTwo extends Component {
 		          <div><h3>4</h3></div>
 		        </Carousel>
      		</div>
+     		{/*works_banner end*/}
      	</div>
-
      	<div className="works_article">
      		<div className="clear section_inner">
      			<div className="works_text left">
@@ -59,6 +59,7 @@ class WorksTwo extends Component {
      			<div className="works_image left"></div>
      		</div>
      	</div>
+     	{/*works_article end*/}
 
      	{this.state.workscon.map(function(e){
      		if(e.work_say!=null){
@@ -80,6 +81,7 @@ class WorksTwo extends Component {
 		     	</div>	
      		}
      	})}
+     	{/*works_person end*/}
 
      	{/*{this.state.workscon.map(function(e){
      		if(e.prize_img!=null){
@@ -117,7 +119,6 @@ class WorksTwo extends Component {
      	})}
 */}
      	
-
       </div>
     );
   }

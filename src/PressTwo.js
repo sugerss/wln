@@ -35,10 +35,11 @@ class PressTwo extends Component {
               <h4 className="news_date">{e.time}</h4>
               <h4 className="news_title">{e.title}</h4>
               <h5>{e.sub_title}</h5>
-              <p>{e.detail}</p>
+              <p dangerouslySetInnerHTML={{__html:`${e.detail}`}}></p>
             </div>
           </div>
           })}
+          {/*news end*/}
           <div className="more left">
             <div className="more_inner">
               <h3>WHAT’S POPULAR</h3>
@@ -48,7 +49,8 @@ class PressTwo extends Component {
                 </li>
               </ul>
             </div>
-          </div>    
+          </div> 
+          {/*more end*/}   
         </div>
       </div>
     );

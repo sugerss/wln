@@ -15,10 +15,9 @@ import img3 from './img/Dove2.jpg';
 
 class Home extends Component {
   constructor(){
-
   	super()
   	this.state={
-  		arr:[],
+  	  arr:[],
       banner_video: [],
       banner_gif: [],
       services_bg: [],
@@ -28,12 +27,6 @@ class Home extends Component {
       homebanner:[],
       url:''
   	}
-  }	
-
-    super()
-    this.state={
-     arr:[]
-    }
   }
 
   componentDidMount(){
@@ -41,7 +34,6 @@ class Home extends Component {
     $('.slick-prev').html('<a><</a>');
     $('.slick-next').html('<a>></a>');
     $.ajax({
-
       url:conf.url+conf.port+'/home_text',
       type:'get',
       success:function(e){
@@ -104,16 +96,7 @@ class Home extends Component {
         this.setState({homebanner:e});
       }.bind(this)
     })
-    $('video').attr('autoplay','autoplay');
-
-    url:'http://'+add+':8005/home_text',
-    type:'get',
-    success:function(a){
-      console.log(a)
-      this.setState({arr:a});
-    }.bind(this)
-   })
-
+    $('.header_top video').attr('autoplay','autoplay');
   }
   Service(){
     var service=document.querySelector('.service');
@@ -143,12 +126,11 @@ class Home extends Component {
   render() {
     return (
       <div className="Home" ref='home' onWheel={this.Service}>
-
         <div className="header_top">
-          <video loop="loop" autoplay="autoplay" src={video}></video>
-          {/*{this.state.banner_video.map(function(e){
-                      return e.banner_video.slice(-3)=='mp4'?(<video loop="loop" preload="auto"><source src={e.banner_video} type="video/mp4"></source></video>):<img src={e.banner_video} />
-                    })}*/}
+          {/*<video loop="loop" autoplay="autoplay" src={video}></video>*/}
+          {this.state.banner_video.map(function(e){
+                      return e.banner_video.slice(-3)=='mp4'?(<video loop="loop" autoplay="autoplay"><source src={e.banner_video} type="video/mp4"></source></video>):<img src={e.banner_video} />
+                    })}
           <header>
             <div className='full'>
               {this.state.arr.map(function(i){
@@ -160,46 +142,20 @@ class Home extends Component {
                 )
               })}
               {this.state.banner_gif.map(function(e){
-                return <img src={e.banner_gif} />
+                return <img src={e.banner_gif} alt=""/>
               })}
             </div>{/*header_banner_text*/}
           </header> 
         </div>
-
-        <header>
-        	<div className='full'>
-        		{this.state.arr.map(function(i){
-              return <p>{i.banner_text}</p>
-            })}
-        		<img src={gif}/>
-        	</div>{/*header_banner_text*/}
-        </header>
-
+        {/*header_top endin*/}
         <div className='focus'>
           <Carousel autoplay>
-            <div><h3><img src={img2} /></h3></div>
-            <div><h3><img src={img1} /></h3></div>
-            <div><h3><img src={img3} /></h3></div>
+            <div><h3><img src={img2}  alt=""/></h3></div>
+            <div><h3><img src={img1}  alt=""/></h3></div>
+            <div><h3><img src={img3}  alt=""/></h3></div>
           </Carousel>
-        	{/*<div className='lb'>
-        		<div className='silder silder_one'>
-              <a className='silder_location'></a>
-              <div className='silder_mask'>
-                <div className='silder_inner'>
-                  <h4></h4>
-                  <h2></h2>
-                  <h6></h6>
-                  <a className='btn_red'><span></span></a>
-                </div>
-              </div>
-            </div>
-        	</div>*/}{/*poster_lunbo_img%text*/}
-          {/*<div className='dots'>
-            <a className='dot'>
-              <div className='dot_img'></div>
-            </a>
-          </div>*/}{/*poster_lunbo_jiaodian*/}
         </div>
+        {/*focus end*/}
         <div className='service' id='service'>
           <div className='services left'>        
             <div className='services_inner'>
@@ -215,6 +171,7 @@ class Home extends Component {
               </div>
             </div>
           </div>
+          {/*service services end*/}
           <div className='column right'>
             <div className='row row_1'>
               <div className='row_pad'>
@@ -247,6 +204,7 @@ class Home extends Component {
               </div>
             </div>
           </div>
+          {/*service column end*/}
         </div>
         <div className='life clear'>
           <div className='left past'>
@@ -261,6 +219,7 @@ class Home extends Component {
               <a className='btn_black'><span><Link to='/history' style={{color: '#fff'}}>看我们历史</Link></span></a>
             </div>
           </div>
+          {/*life past end*/}
           <div className='right life_go'>
             <div className='mask_bg'></div>
             <div className='life_word'>
@@ -268,11 +227,12 @@ class Home extends Component {
                 return <h3>{i.sanya_title}</h3>
               })}
               {this.state.sanya_img.map(function(e){
-                return <img src={e.sanya_img} />
+                return <img src={e.sanya_img}  alt=""/>
               })}
               <a className='btn_white'><span><Link to='/live' style={{color: '#000'}}>奥美生活</Link></span></a>
             </div>            
           </div>
+          {/*life life_go end*/}
         </div>
       </div>
     );

@@ -3,9 +3,7 @@
 	padding: 50px 0 50px 0;
 	display: none;
 }
-.team_list{
-	
-}
+/*team_list start*/
 .team_list li{
 	float: left;
 	width: calc( 100% /3);
@@ -107,6 +105,7 @@
 	from {left:-600px;}
 	to { left:0;}
 }
+/*team_list end*/
 
 /*响应式布局*/
 @media screen and (max-width: 790px) {
@@ -125,6 +124,7 @@
 	.show_team{
 		padding: 1.93237rem 0 1.93237rem 0;
 	}
+	/*team_list start*/
 	.team_list li{
 		height: 13.91304rem;
 	}
@@ -161,6 +161,7 @@
 		from {left:-23.18841rem;}
 		to { left:0;}
 	}	
+	/*team_list end*/
 }
 
 

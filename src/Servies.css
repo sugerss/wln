@@ -5,6 +5,7 @@
 	width: 100%;
 	min-height: 118px;
 }
+/*servies li start*/
 .servies li{
 	float: left;
 	width: 25%;
@@ -38,6 +39,7 @@
 .servies li .servies_title h3 a:hover{
 	color: #e2231a;
 }
+/*servies li end*/
 
 /*响应式布局*/
 @media only screen and (max-width: 768px){
@@ -51,6 +53,7 @@
 	.servies ul{
 		min-height: 4.56038rem;
 	}
+	/*servies li start*/
 	.servies li .servies_title h3{
 		margin-bottom: 1.93236rem;
 	}
@@ -58,4 +61,5 @@
 		font-size: 0.92753rem;
 		line-height: 1.08212rem;
 	}
+	/*servies li end*/
 }

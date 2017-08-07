@@ -29,7 +29,7 @@ class Vision extends Component {
       <div className="Vision">
         {this.state.visions.map(function(e){
           return <div className='content_top clear'>
-            <img src={e.vision_bg} />
+            <img src={e.vision_bg} alt=""/>
             <div className='content_top_word'>
               <div className='top_word'>
                 <h2>“ {e.vision_title} ”</h2>
@@ -38,6 +38,7 @@ class Vision extends Component {
             </div>  
           </div> 
         })}
+        {/*vision_top end*/}
         <div className='vision_box'>
         	<div className='user_vision'>
 	        	<div className='wrap'>
@@ -58,6 +59,7 @@ class Vision extends Component {
 	        		</div>
 	        	</div>
 	        </div>
+          {/*user_vision end*/}
 	        <div className='user_culture'>
 	        	<div className='wrap'>
 	        		<div className='user_culture_inner background clear'>
@@ -75,13 +77,14 @@ class Vision extends Component {
 	        		</div>
 	        	</div>
 	        </div>
+          {/*user_culture end*/}
         </div>
         <div className='lions_aifei clear'>
           {this.state.visions.map(function(e){
             return <div className='lions_box left'>
             <div className='lions_padding'>
               <div className='lions_con'>
-                <img src={e.prize_img}/>
+                <img src={e.prize_img} alt=""/>
               </div>
               <div className='lions_word'>
                 <h2>{e.prize_name.split(' ')[0]}<br />{e.prize_name.split(' ')[1]}</h2>
@@ -91,6 +94,7 @@ class Vision extends Component {
           </div> 
           })}
         </div>
+        {/*lions_aifei end*/}
         <div className='team_history_box clear'>
           {this.state.visions.map(function(e){
             return  <div className='history_box left'>
@@ -103,6 +107,7 @@ class Vision extends Component {
             </div>
           })}
         </div>
+        {/*team_history_box end*/}
       </div>
     );
   }

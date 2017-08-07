@@ -50,6 +50,7 @@ class Press extends Component {
                     <p>{e.con}</p>
                   </div>
                 </div>
+                {/*news_text end*/}
                 <div className="news_detail left">
                   <div>
                     <h4 className="news_date">{e.time}</h4> 
@@ -60,6 +61,7 @@ class Press extends Component {
                     </div>
                   </div>
                 </div>
+                {/*news_detail end*/}
               </li>
               })}
             </ul> 

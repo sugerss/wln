@@ -75,6 +75,7 @@
     display: inline-block;
     background: #fff;
 }
+/*left address column ending*/
 #allmap{
 	width: calc((100%/3)*2);
 	height: 700px;
@@ -130,6 +131,7 @@
 	    line-height: 0.657rem;
 	    padding: 0.19324rem 0.57971rem !important;
 	}
+	/*left address column ending*/
 	#allmap{
 		width: 90%;
 		margin: 0 5%;

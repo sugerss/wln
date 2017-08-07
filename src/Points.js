@@ -45,6 +45,7 @@ class Points extends Component {
                     <p>{e.text}</p>
                   </div>
                 </div>
+                {/*views_text end*/}
                 <div className="views_detail left">
                   <div>
                     <h4 className="views_date">{e.time}</h4> 
@@ -55,6 +56,7 @@ class Points extends Component {
                     </div>
                   </div>
                 </div>
+                {/*views_detail end*/}
               </li>
             })}
             </ul> 

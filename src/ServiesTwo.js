@@ -32,7 +32,7 @@ class ServiesTwo extends Component {
           return <div className="serve">
           <div className="serve_inner">
             <div className="serve_pro">
-              <img className="active_image" src={e.services_small_pic}/>
+              <img className="active_image" src={e.services_small_pic} alt=""/>
               <h3>{e.services_vision}</h3>
             </div>
             <p className="serve_intro">{e.services_text}</p>
@@ -47,6 +47,7 @@ class ServiesTwo extends Component {
           </div>
         </div>
         })}
+        {/*servies_detail end*/}
         <div className="section">
           <div className="section_inner">
             <h2>相关作品</h2>

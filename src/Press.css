@@ -20,6 +20,7 @@
 	margin-bottom: 100px;
 	width: 100%;
 }
+/*news_text start*/
 .press li .news_text{
 	width: 70%;
 }
@@ -56,6 +57,8 @@
 	line-height: 20px;
 	color: #1A1A1A;	
 }
+/*news_text end*/
+/*news_detail start*/
 .press li .news_detail{
 	width: 30%;
 }
@@ -85,6 +88,8 @@
 	line-height: 20px;
 }
 .press li .news_more a button a{color: #fff; text-decoration: none;}
+/*news_detail start*/
+
 /*响应式布局*/
 @media only screen and (max-width: 1000px){
 	.press .news{
@@ -142,6 +147,7 @@
 	.press .news li{
 		margin-bottom: 3.86473rem;
 	}
+	/*news_text start*/
 	.press li .news_text div{
 		padding: 0 1.93237rem 0.88889rem 0;
 	}
@@ -165,5 +171,6 @@
 		font-size: 0.54106rem;
 		line-height: 0.77295rem;
 	}
+	/*news_text end*/
 	/*.press li .news_detail display: none 未设置其里面的内容*/
 }

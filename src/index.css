@@ -38,6 +38,7 @@ body{
 .fixed:hover{
 	background-color: #e8e8e8;
 }
+/*index fixed end*/
 .header{
 	height: 100%;
 	width:100%;
@@ -110,6 +111,7 @@ body{
 	display: none;
 	transition:0.5s;
 }
+/*index header pc end*/
 .mobile_menu_button{
 	margin: 0 45px 0 25px;
 	float: left;
@@ -229,6 +231,7 @@ body{
     padding-left: 10px;
     line-height: 24px;
 }
+/*index header ipone end*/
 .footer_box{
 	overflow: hidden;
 	background-color: #404041;
@@ -282,7 +285,7 @@ body{
 .foot_box .about_our .sxin{
 	margin: 25px 0 20px 20px;
 }
-
+/*index footer a end*/
 .Copyright_box{
 	padding: 0 45px;
 	font-size: 15px;
@@ -300,7 +303,6 @@ body{
     color: #cccccb;
     font-size: 15px;
 }
-
 .copy li{
 	float: left;
     margin-right: 46px;
@@ -319,6 +321,7 @@ body{
 	font-size: 15px;
 	line-height: 53px;
 }
+/*index footer copyright end*/
 .Contant,.works,.Vision,.Team,.servies,.press,.Home,.History,.points,.Live{
 	margin-top: 1px;
 }
@@ -444,6 +447,7 @@ body{
 	    font-size: 0.54106rem;
 	    padding: 0.34783rem 0.77295rem;
 	}
+	/*index header pc end*/
 	.mobile_menu_button{
 		margin: 0 1.73913rem 0 0.96618rem;
 	    height: 3.86473rem;
@@ -510,6 +514,7 @@ body{
 	    padding-left: 0.38647rem;
 	    line-height: 0.92754rem;
 	}
+	/*index header ipone end*/
 	.foot_box{
 		padding: 2.78261rem 0.57971rem 2.00966rem;
 	}
@@ -545,6 +550,7 @@ body{
 	.about_our img:last-of-type { 
 		margin: 0.77294rem auto;
 	}
+	/*index footer a end*/
 	.Copyright_box{
 		font-size: 0.57971rem;
 		padding: 0 0.38647rem;
@@ -570,6 +576,7 @@ body{
 		line-height: 1.35265rem; 
 		height: 1.35265rem; 
 	}	
+	/*index footer copyright end*/
 	.Contant,.works,.Vision,.Team,.servies,.press,.Home,.History,.points,.Live{
 		margin-top: 1px;
 	}

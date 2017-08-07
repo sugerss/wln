@@ -29,6 +29,14 @@
     font-size: 40px;
     line-height: 48px;
 }
+.top_word div{
+	color: #fff;
+	font-weight: normal;    
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 28px;
+}
+/*vision_top end*/
 .user_vision{
 	background-color: #fff;
 }
@@ -64,6 +72,7 @@
 	width:66.66666667%;
 	padding: 40px 15px;
 }
+/*vision_top end*/
 .user_culture{
 	background-color: #f2f2f3;
 	margin-bottom: 50px;
@@ -76,6 +85,7 @@
 	width:66.66666667%;
 	padding: 40px 15px;
 }
+/*user_culture end*/
 .lions_aifei{
 	height: 404px;
 	margin-bottom: 100px;
@@ -111,6 +121,7 @@
     line-height: 28px;
     font-weight: normal;
 }
+/*user_culture end*/
 .team_history_box{
 	background-position: center center;
     background-repeat: no-repeat;
@@ -191,6 +202,7 @@
 	background-color: #fff;
     color: #E2231A;
 }
+/*team_history_box end*/
 
 /*响应式布局*/
 @media screen and (max-width: 768px){
@@ -220,6 +232,12 @@
 	    font-size: 1.54589rem;
 	    line-height: 1.85507rem;
 	}
+	.top_word div{ 
+	    margin-bottom: 0.77295rem;
+	    font-size: 0.92573rem;
+	    line-height: 1.08212rem;
+	}
+	/*vision_top end*/
 	.vision_box h1{
 		font-size: 1.54589rem;
 	    line-height: 1.93237rem;
@@ -233,6 +251,7 @@
 		font-size: 0.92754rem;
 	    line-height: 1.08213rem;
 	}
+	/*vision_top end*/
 	.user_culture_inner,.user_vision_inner{
 		padding: 0.77295rem 0.57971rem;
 	}
@@ -245,6 +264,7 @@
 	.user_culture_word{
 		padding: 1.54589rem 0.57971rem;
 	}
+	/*vision_top end*/
 	.lions_aifei{
 		height: 15.61353rem;
 		margin-bottom: 3.86473rem;
@@ -270,6 +290,7 @@
 		font-size: 0.92754rem;
 	    line-height: 1.08213rem;
 	}
+	/*lions_aifei end*/
 	.history_box{
 		height:19.32367rem;
 	}
@@ -297,6 +318,7 @@
 	    font-size: 0.81159rem;
 	    line-height: 0.96618rem;
 	}	
+	/*lions_aifei end*/
 }
 
 

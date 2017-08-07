@@ -35,8 +35,8 @@ class Servies extends Component {
             <Link to={`/serviesTwo?id=${e.id}`}>
               <div className="servies_img">
                 <div>
-                  <img className="active_image" src={e.services_img}/>
-                  <img src={e.services_gif}/>
+                  <img className="active_image" src={e.services_img} alt=""/>
+                  <img src={e.services_gif} alt=""/>
                 </div>  
               </div>
               <div className="servies_title">
@@ -47,6 +47,7 @@ class Servies extends Component {
             </Link>
           </li>
           })}
+          {/*servies li end*/}
         </ul>
       </div>
     );

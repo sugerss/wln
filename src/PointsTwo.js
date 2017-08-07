@@ -40,6 +40,7 @@ class PointsTwo extends Component {
               </div>
             </div> 
           })}
+          {/*views end*/}
           <div className="more left">
             <div className="more_inner">
               <h3>WHAT’S POPULAR</h3>
@@ -49,7 +50,8 @@ class PointsTwo extends Component {
                 </li>
               </ul>
             </div>
-          </div>    
+          </div>
+          {/*more end*/}    
         </div>  
       </div>
     );

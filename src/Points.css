@@ -13,6 +13,7 @@
 	margin-bottom: 100px;
 	width: 100%;
 }
+/*views_text start*/
 .points li .views_text{
 	width: 70%;
 }
@@ -47,6 +48,8 @@
 	line-height: 20px;
 	color: #1A1A1A;	
 }
+/*views_text end*/
+/*views_detail start*/
 .points li .views_detail{
 	width: 30%;
 }
@@ -77,6 +80,8 @@
 	line-height: 20px;
 }
 .points li .views_more a button a{color: #fff; text-decoration: none;}
+/*views_detail end*/
+
 /*响应式布局*/
 @media only screen and (max-width: 768px){
 	.points li .views_detail div{
@@ -122,6 +127,7 @@
 	.points .views li{
 		margin-bottom: 3.86473rem;
 	}
+	/*views_text start*/
 	.points li .views_text div{
 		padding: 0 1.93237rem 0.88889rem 0;
 	}
@@ -141,5 +147,6 @@
 		font-size: 0.54106rem;
 		line-height: 0.77295rem;
 	}
+	/*views_text end*/
 	/*.points li .views_detail display: none 未设置其里面的内容*/
 }

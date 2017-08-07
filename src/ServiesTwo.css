@@ -70,6 +70,7 @@
 	line-height: 24px;
 	color: #231f20;
 }
+/*serviesTwo end*/
 
 /*响应式布局*/
 @media screen and (max-width: 1200px){
@@ -156,4 +157,5 @@
 		font-size: 0.61836rem;
 		line-height: 0.92754rem;
 	}
+	/*serviesTwo end*/
 }

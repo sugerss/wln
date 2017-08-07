@@ -71,6 +71,7 @@
 .ant-carousel .slick-slide h3 {
   color: #fff;
 }
+/*Live carousel end*/
 .live_life{
 	width: 100%;
     background-color: rgb(226, 35, 26);
@@ -100,6 +101,7 @@
 	font-size: 24px;
 	line-height: 28px;
 }
+/*live_life end*/
 .live_banner_second,.live_banner_third,.live_banner_four{
 	width: 100%;
 }
@@ -118,6 +120,7 @@
 .banner_right video{
 	width: 100%;
 }
+/*live_banner_second live_banner_third live_banner_four end*/
 
 /*响应式布局*/
 @media screen and (max-width: 768px) {
@@ -165,6 +168,7 @@
 		font-size: 0.92753rem;
 		line-height: 1.08282rem;
 	}
+	/*live_life end*/
 }
 
 

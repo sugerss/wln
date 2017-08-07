@@ -158,6 +158,7 @@ Gulou District, Nanjing</p>
         		</div>
         	</div>
         </div>
+        {/*left address column ending*/}
         <div id="allmap" className='left'></div>
       </div>
     );

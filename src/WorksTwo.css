@@ -80,6 +80,7 @@
     font-size: 44px;
     color: #fff;
 }
+/*works_banner end*/
 .works_article{
 	margin-top: 100px;
 }
@@ -93,6 +94,7 @@
 	padding: 0 15px;
 	text-align: center;
 }
+/*works_banner end*/
 .works_person{
 	margin: 100px 0 40px 0;
 	padding: 65px 0 40px 0;
@@ -126,6 +128,7 @@
 	color: #666667;
 	background: #fff;
 }
+/*works_person end*/
 .works_pro ul li{
 	float: left;
 	width: 33.33%;
@@ -247,12 +250,14 @@
 	.ant-carousel .slick-prev a,.ant-carousel .slick-next a{
 	    font-size: 1.70048rem;
 	}
+	/*works_banner end*/
 	.works_article{
 		margin-top: 3.86473rem;
 	}
 	.works_image_inner{
 		padding: 0 0.57971rem;
 	}
+	/*works_banner end*/
 	.works_person{
 		margin: 1.93237rem 0 0 0;
 		padding: 1.93237rem 0.57971rem 0.77295rem;
@@ -275,6 +280,7 @@
 		font-size: 0.61836rem;
 		line-height: 0.85024rem;
 	}
+	/*works_banner end*/
 	.works_pro ul li .li_inner{
 		padding: 0 0.57971rem;
 	}
